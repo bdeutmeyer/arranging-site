@@ -10,15 +10,12 @@ export default function Navigation() {
         <NavBar 
             links={[
                 <Link key={1} onClick={() => setCurrentPage('/')}className={`nav-link  ${currentPage === '/' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/">
-                    About Me
+                    Home
                 </Link>,
-                <Link key={2} onClick={() => setCurrentPage('/portfolio')} className={`nav-link ${currentPage === '/portfolio' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/portfolio">
-                    Portfolio
+                <Link key={2} onClick={() => setCurrentPage('/arrangements')} className={`nav-link ${currentPage === '/arrangements' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/arrangements">
+                    Arrangements
                 </Link>,
-                <Link key={3} onClick={() => setCurrentPage('/resume')}className={`nav-link nav-section ${currentPage === '/resume' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/resume">
-                    Resume
-                </Link>,
-                <Link key={4} onClick={() => setCurrentPage('/contact')}className={`nav-link nav-section ${currentPage === '/contact' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/contact">
+                <Link key={3} onClick={() => setCurrentPage('/contact')}className={`nav-link nav-section ${currentPage === '/contact' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/contact">
                     Contact
                 </Link>,
             ]}

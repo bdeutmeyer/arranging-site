@@ -10,7 +10,7 @@ function App() {
     <div id="content">
       <div id="nf-wrap">
         <div id="non-footer">
-          <Header />
+          {/* <Header /> */}
           <Navigation />
           <Outlet />
         </div>

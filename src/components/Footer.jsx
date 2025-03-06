@@ -3,6 +3,9 @@ import { useState } from 'react'
 // import ghLogo from '../assets/logos/github-mark.svg'
 // import liLogo from '../assets/logos/linkedin-icon.png'
 
+// Footer will contain social media links (LinkedIn, BlueSky, Facebook), and IF I have a profile anywhere else like JW Pepper or Hal Leonard, it will have those too. ALSO YOUTUBE. "Let's connect"
+
+
 //Footer section
 function Footer() {
     // const [ghLogoHover, setGhLogoHover] = useState(false);
