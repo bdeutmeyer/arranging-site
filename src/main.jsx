@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Welcome from './pages/Welcome.jsx';
-import Arrangements from './pages/Arrangements.jsx';
+import Arrangements from './pages/arrangements/Arrangements.jsx';
 import Contact from './pages/Contact.jsx';
 import Error from './components/Error.jsx'
 import 'bootstrap/dist/css/bootstrap.css';

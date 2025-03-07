@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export default function About() {
     return (
         <>
-            <h3 className='m-4 fw-bold'>About Me</h3>
+            <h3 className='m-4 fw-bold'>About Beth</h3>
             <hr />
             <br />
             <div>
