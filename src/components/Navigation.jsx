@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import NavBar from './NavBar'
+import NavBar from './NavBar';
+import BDLogo from '../assets/images/BD-logo.svg';
 
 //Navigation links
 export default function Navigation() {
