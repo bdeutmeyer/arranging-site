@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Welcome from './pages/Welcome.jsx';
 import Arrangements from './pages/arrangements/Arrangements.jsx';
+import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx';
 import Error from './components/Error.jsx'
 import 'bootstrap/dist/css/bootstrap.css';
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: 'arrangements',
         element: <Arrangements />,
+      },
+      {
+        path: 'about',
+        element: <About />,
       },
       {
         path: 'contact',
