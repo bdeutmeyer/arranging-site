@@ -30,7 +30,7 @@ export default function Contact() {
                     <Input
                         id="userEmail"
                         name="email"
-                        placeholder="ex. beth@deutmeyer.com"
+                        placeholder="ex. deutmeyerfan@email.com"
                         type="email"
                     />
                 </FormGroup>

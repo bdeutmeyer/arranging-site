@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Welcome from './pages/Welcome.jsx';
 import Arrangements from './pages/arrangements/Arrangements.jsx';
+import SongDetail from './pages/arrangements/SongDetail.jsx';
 import About from './pages/About.jsx'
 import Contact from './pages/Contact.jsx';
 import Error from './components/Error.jsx'
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: 'arrangements',
         element: <Arrangements />,
+      },
+      {
+        path: 'arrangements/:songTitle',
+        element: <SongDetail />,
       },
       {
         path: 'about',

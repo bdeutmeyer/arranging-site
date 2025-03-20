@@ -1,13 +1,20 @@
+import { Link } from 'react-router-dom';
 import { Card, CardImg, CardText, CardImgOverlay, CardTitle, CardLink, Col } from 'reactstrap';
+import React, { useState } from 'react';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 //Project cards
-export default function Songs(props) {
+export default function Songs({ songData, onSongClick }) {
     return (
         <>
-            {props.songData.map(detail => (
-                <Col key={detail.id}>
+            {songData.map(song => (
+                <Col key={song.id} onClick={() => onSongClick(song.id)}>
+                    <Link to={`/arrangements/${song.pathExt}`}>
                     <Card inverse className='m-3 card-hover'>
-                        <CardImg
+                        <CardTitle>
+                            {song.songTitle}
+                        </CardTitle>
+                        {/* <CardImg
                             alt={detail.imageAlt}
                             src={detail.imagePath}
                             className='w-100 h-auto screenshot'
@@ -24,12 +31,30 @@ export default function Songs(props) {
                                 <div className='row'>
                                     <CardText className='text-dark h-75 card-text'>{detail.songSubtitle}</CardText>
                                 </div>
-                            </CardImgOverlay>
-                        </div>
+                            </CardImgOverlay> */}
+                        {/* </div> */}
 
                     </Card>
+                    </Link>
+
                 </Col>
             ))}
         </>
     )
 };
+
+// import React from 'react';
+
+// const Songs = ({ songData, onSongClick }) => {
+//   return (
+//     <div>
+//       {songData.map((song) => (
+//         <div key={song.id} onClick={() => onSongClick(song)}>
+//           <h2>{song.songTitle}</h2>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default Songs;
