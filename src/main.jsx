@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <Arrangements />,
       },
       {
-        path: 'arrangements/:songTitle',
+        path: 'arrangements/:ext',
         element: <SongDetail />,
       },
       {

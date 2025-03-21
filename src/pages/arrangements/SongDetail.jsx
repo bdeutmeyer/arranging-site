@@ -5,7 +5,8 @@ import songData from '../../data/songData';
 
 export default function SongDetail() {
     const { ext } = useParams();
-    // const song = songData.find((index) => index.pathExt == ext)
+    const song = songData.find((index) => index.pathExt == ext)
+    console.log(song);
 
     return (
         <>
