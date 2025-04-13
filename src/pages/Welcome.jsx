@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom'
 // import headshot from '../assets/images/Beth.jpg'
 import { Card, CardImg, CardImgOverlay } from 'reactstrap';
+// import { sortAlphaTitle } from '../utils/helpers';
 
 //About Me page
 export default function Welcome() {
+    // const sortAlphaTitle = () => {
+    //     // const titles = songData.songTitle;
+    //     // console.log(titles);
+    //     console.log("hello")
+    // };
+    // {sortAlphaTitle}
     return (
         <>
         {/* Need hero photo */}

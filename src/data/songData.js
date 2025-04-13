@@ -7,11 +7,12 @@ const songData = [
         imagePath: 'Future variable defined in imports',
         imageAlt: 'Image alt',
         purchaseLink: 'link',
-        composerLast: 'Lastname',
+        composerLast: 'Beethoven',
         composerFirst: 'Firstname',
-        songTitle: 'Title1',
+        songTitle: 'D',
         songParts: 'SATB/SSAA, etc',
-        songPartsDescr: 'Mixed, Treble, etc',
+        songPartsDescr: 'Mixed voices',
+        accompaniment: 'piano + flute',
         releaseDate: 'date',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
@@ -25,9 +26,10 @@ const songData = [
         purchaseLink: 'link',
         composerLast: 'Lastname',
         composerFirst: 'Firstname',
-        songTitle: 'Title2',
+        songTitle: 'A',
         songParts: 'SATB/SSAA, etc',
-        songPartsDescr: 'Mixed, Treble, etc',
+        songPartsDescr: 'Treble clef voices',
+        accompaniment: 'piano',
         releaseDate: 'date',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
@@ -41,9 +43,10 @@ const songData = [
         purchaseLink: 'link',
         composerLast: 'Lastname',
         composerFirst: 'Firstname',
-        songTitle: 'Title3',
+        songTitle: 'C',
         songParts: 'SATB/SSAA, etc',
-        songPartsDescr: 'Mixed, Treble, etc',
+        songPartsDescr: 'Bass clef voices',
+        accompaniment: 'a cappella',
         releaseDate: 'date',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
