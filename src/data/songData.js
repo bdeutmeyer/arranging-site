@@ -9,11 +9,12 @@ const songData = [
         purchaseLink: 'link',
         composerLast: 'Beethoven',
         composerFirst: 'Firstname',
-        songTitle: 'D',
+        songTitle: 'A',
         songParts: 'SATB/SSAA, etc',
-        songPartsDescr: 'Mixed voices',
+        //change songPartsDescr to 'category', one word only, and then plan to display in sections down the line? treble section, bass section, mixed section? would also need to display only a certain number per page eventually
+        category: 'mixed',
         accompaniment: 'piano + flute',
-        releaseDate: 'date',
+        releaseDate: '2025-01-01',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
         }
@@ -26,11 +27,11 @@ const songData = [
         purchaseLink: 'link',
         composerLast: 'Lastname',
         composerFirst: 'Firstname',
-        songTitle: 'A',
+        songTitle: 'B',
         songParts: 'SATB/SSAA, etc',
-        songPartsDescr: 'Treble clef voices',
+        category: 'treble',
         accompaniment: 'piano',
-        releaseDate: 'date',
+        releaseDate: '2025-01-15',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
         }
@@ -45,9 +46,9 @@ const songData = [
         composerFirst: 'Firstname',
         songTitle: 'C',
         songParts: 'SATB/SSAA, etc',
-        songPartsDescr: 'Bass clef voices',
+        category: 'bass',
         accompaniment: 'a cappella',
-        releaseDate: 'date',
+        releaseDate: '2024-11-22',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
         }

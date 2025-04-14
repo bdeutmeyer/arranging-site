@@ -3,34 +3,44 @@
 import songData from "../data/songData";
 
 export const sortSongs = (property) => {
-    return [...songData].sort((a, b) => {
-      if (a[property] < b[property]) return -1;
-      if (a[property] > b[property]) return 1;
-      return 0;
-    });
-  };
+  return [...songData].sort((a, b) => {
+    if (property === 'releaseDate') {
+      // Newest to oldest
+      return new Date(b.releaseDate).getTime() - new Date(a.releaseDate).getTime();
+    }
 
-export function filterSongs(songData, filters) {
-  return songData.filter(song => {
-      // For each filter category (e.g., voicing, accompaniment)
-      return Object.entries(filters).every(([category, options]) => {
+    // For alphabetical string sorting
+    const aValue = a[property]?.toLowerCase?.() || '';
+    const bValue = b[property]?.toLowerCase?.() || '';
+    
+    if (aValue < bValue) return -1;
+    if (aValue > bValue) return 1;
+    return 0;
+  });
+};
+
+
+
+  export function filterSongs(songData, filters) {
+    return songData.filter(song => {
+      return Object.entries(filters).every(([keyName, options]) => {
         const activeOptions = Object.entries(options)
           .filter(([_, isChecked]) => isChecked)
-          .map(([label]) => label.toLowerCase());
+          .map(([id]) => id.toLowerCase());
   
-        // If no filters selected in this category, skip filtering it
         if (activeOptions.length === 0) return true;
   
-        // Get the value in the song data to match against
         let songField = '';
-        if (category === 'voicing') songField = song.songPartsDescr?.toLowerCase() || '';
-        if (category === 'accompaniment') songField = song.accompaniment?.toLowerCase() || '';
+        if (keyName === 'category') songField = song.category?.toLowerCase() || '';
+        if (keyName === 'accompaniment') songField = song.accompaniment?.toLowerCase() || '';
   
-        // Must match *at least one* selected option in this category
-        return activeOptions.some(opt => songField.includes(opt));
+        // Match exact values since song.category is now 'treble', 'bass', or 'mixed'
+        return activeOptions.includes(songField);
       });
     });
   }
+  
+  
   
   
 

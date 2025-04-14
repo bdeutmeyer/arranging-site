@@ -17,35 +17,36 @@ export default function Filter({ onFilterChange }) {
 
   // Filters are directly managed here
   const [filters, setFilters] = useState({
-    voicing: {
-      'treble clef voices': false,
-      'bass clef voices': false,
-      'mixed voices': false
+    category: {
+      treble: false,
+      bass: false,
+      mixed: false
     },
     accompaniment: {
-      'a cappella': false,
-      'piano only': false,
-      'other instruments': false
+      aCappella: false,
+      pianoOnly: false,
+      otherInst: false
     }
   });
+  
 
   const toggle = () => setIsOpen(!isOpen);
 
   // Reset filters to default (all false)
   const clearFilters = () => {
     setFilters({
-      voicing: { 'treble clef voices': false, 'bass clef voices': false, 'mixed voices': false },
-      accompaniment: { 'a cappella': false, 'piano only': false, 'other instruments': false }
+      category: { treble: false, bass: false, mixed: false },
+      accompaniment: { aCappella: false, pianoOnly: false, otherInst: false }
     });
   };
 
   // Update the filter when a checkbox is clicked
-  const handleCheckboxChange = (category, label, checked) => {
+  const handleCheckboxChange = (keyName, id, checked) => {
     setFilters(prev => ({
       ...prev,
-      [category]: {
-        ...prev[category],
-        [label]: checked
+      [keyName]: {
+        ...prev[keyName],
+        [id]: checked
       }
     }));
   };
@@ -62,21 +63,44 @@ export default function Filter({ onFilterChange }) {
         <OffcanvasHeader toggle={toggle}>Filter</OffcanvasHeader>
         <OffcanvasBody>
           <strong>Filter by voicing</strong>
-          {Object.keys(filters.voicing).map(label => (
-            <FormGroup check key={label}>
+            <FormGroup check>
               <Input
                 type="checkbox"
-                id={`voicing-${label}`}
-                checked={filters.voicing[label]}
+                id='treble'
+                checked={filters.category.treble}
                 onChange={(e) =>
-                  handleCheckboxChange('voicing', label, e.target.checked)
-                }
+                    handleCheckboxChange('category', 'treble', e.target.checked)
+                  }
+                  
               />
-              <Label check htmlFor={`voicing-${label}`}>{label}</Label>
+              <Label check htmlFor='treble'>Treble clef voices</Label>
             </FormGroup>
-          ))}
+            <FormGroup check>
+              <Input
+                type="checkbox"
+                id='bass'
+                checked={filters.category.bass}
+                onChange={(e) =>
+                    handleCheckboxChange('category', 'bass', e.target.checked)
+                  }
+              />
+    
+              <Label check htmlFor='bass'>Bass clef voices</Label>
+            </FormGroup>
+            <FormGroup check>
+              <Input
+                type="checkbox"
+                id='mixed'
+                checked={filters.category.mixed}
+                onChange={(e) =>
+                    handleCheckboxChange('category', 'mixed', e.target.checked)
+                  }
+                  
+              />
+              <Label check htmlFor='mixed'>Mixed voices</Label>
+            </FormGroup>
 
-          <strong className="mt-3">Filter by accompaniment</strong>
+          {/* <strong className="mt-3">Filter by accompaniment</strong>
           {Object.keys(filters.accompaniment).map(label => (
             <FormGroup check key={label}>
               <Input
@@ -93,7 +117,7 @@ export default function Filter({ onFilterChange }) {
 
           <Button color="danger" onClick={clearFilters}>
             Clear All Filters
-          </Button>
+          </Button> */}
         </OffcanvasBody>
       </Offcanvas>
 
