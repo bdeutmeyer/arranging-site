@@ -1,28 +1,27 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NavBar from './NavBar';
-import BDLogo from '../assets/images/BD-logo.svg';
 
-//Navigation links
 export default function Navigation() {
-    const [currentPage, setCurrentPage] = useState('/');
+  const [currentPage, setCurrentPage] = useState('/');
 
-    return (
-        <NavBar
-            links={[
-                <Link key={1} onClick={() => setCurrentPage('/')} className={`nav-link  ${currentPage === '/' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/">
-                    Home
-                </Link>,
-                <Link key={2} onClick={() => setCurrentPage('/arrangements')} className={`nav-link ${currentPage === '/arrangements' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/arrangements">
-                    Arrangements
-                </Link>,
-                <Link key={3} onClick={() => setCurrentPage('/about')} className={`nav-link ${currentPage === '/about' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/about">
-                    About
-                </Link>,
-                <Link key={4} onClick={() => setCurrentPage('/contact')} className={`nav-link nav-section ${currentPage === '/contact' ? 'active text-dark bg-light shadow fw-bold' : 'text-light'}`} to="/contact">
-                    Contact
-                </Link>,
-            ]}
-        />
-    );
-}
+  const navItems = [
+    { path: '/', label: 'Home' },
+    { path: '/arrangements', label: 'Arrangements' },
+    { path: '/about', label: 'About' },
+    { path: '/contact', label: 'Contact' },
+  ];
+
+  const links = navItems.map(({ path, label }, index) => (
+    <Link
+      key={index}
+      to={path}
+      onClick={() => setCurrentPage(path)}
+      className={`nav-link ${currentPage === path ? 'active text-decoration-underline fw-bold' : 'text-dark'}`}
+    >
+      {label}
+    </Link>
+  ));
+
+  return <NavBar links={links} />;
+};

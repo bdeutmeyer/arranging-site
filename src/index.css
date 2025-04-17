@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -28,6 +28,53 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+#content {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.card-hover .overlay {
+  display: none;
+}
+
+.card-hover:hover .overlay {
+  display: block;
+  background-color: #e2e2d4;
+}
+
+.hidden-link:hover {
+  font-weight: bolder;
+  box-shadow: 4px;
+  text-decoration: underline;
+}
+
+.hidden-button {
+  padding: 2px;
+}
+
+.hidden-button:hover {
+  padding: 0px;
+}
+
+.card-text {
+  font-size: small;
+}
+
+#nf-wrap {
+  min-width: 100%;
+}
+
+#non-footer {
+  padding-bottom: 80px;
+}
+
+#footer {
+  position: relative;
+  clear: both;
+  margin-top: -80px;
+  height: 80px;
 }
 
 h1 {
@@ -65,4 +112,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */

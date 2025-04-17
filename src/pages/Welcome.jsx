@@ -15,7 +15,7 @@ export default function Welcome() {
         <>
         {/* Need hero photo */}
             <h1 className='m-4 fw-bold'>Beth Deutmeyer</h1>
-            <h2 className="text-start">Arranger | Singer | Teacher</h2> 
+            <h2 className="text-start">Arranger | Teacher | Singer</h2> 
             <hr />
             <br />
             <div>
