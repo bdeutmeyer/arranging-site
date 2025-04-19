@@ -1,5 +1,5 @@
 // import images from assets
-
+// To add songs: -check "upcoming" boolean of the last song, make sure all images have (x) aspect ratio, releaseDate format YYYY-MM-DD
 const songData = [
     {
         id: 1,
@@ -11,13 +11,14 @@ const songData = [
         composerFirst: 'Firstname',
         songTitle: 'A',
         songParts: 'SATB/SSAA, etc',
-        //change songPartsDescr to 'category', one word only, and then plan to display in sections down the line? treble section, bass section, mixed section? would also need to display only a certain number per page eventually
         category: 'mixed',
         accompaniment: 'piano + flute',
         releaseDate: '2025-01-01',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
-        }
+        },
+        upcoming: true
+
     },
     {
         id: 2,
@@ -34,7 +35,8 @@ const songData = [
         releaseDate: '2025-01-15',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
-        }
+        },
+        upcoming: false
     },
     {
         id: 3,
@@ -51,7 +53,8 @@ const songData = [
         releaseDate: '2024-11-22',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
-        }
+        },
+        upcoming: false
     },
 ];
 
