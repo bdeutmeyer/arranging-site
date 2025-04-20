@@ -15,17 +15,15 @@ export default function NavBar({ links }) {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <Navbar expand="sm" className="nav-section shadow p-0 px-3 sticky-top z-3 bg-white" container="fluid">
+    <Navbar expand="sm" className="nav-section shadow py-1 px-5 sticky-top z-3 bg-white container-fluid" >
       <NavbarToggler onClick={toggle} className="ms-auto me-2" />
-
       <Collapse isOpen={isOpen} navbar>
-        <Nav className="w-100 d-flex flex-row justify-content-between align-items-center" navbar>
-        {links.map((link, index) => (
-  <NavItem key={index} className="mx-2">
-    {link}
-  </NavItem>
-))}
-
+        <Nav className="d-flex flex-row justify-content-between align-items-center w-100" navbar>
+          {links.map((link, index) => (
+            <NavItem key={index} className="navitem mx-2">
+              {link}
+            </NavItem>
+          ))}
         </Nav>
       </Collapse>
     </Navbar>

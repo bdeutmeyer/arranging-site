@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Card, CardImg, CardText, CardImgOverlay, CardTitle, CardLink, Col } from 'reactstrap';
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 //Project cards
 export default function Songs({ songData, onSongClick }) {
@@ -42,19 +41,3 @@ export default function Songs({ songData, onSongClick }) {
         </>
     )
 };
-
-// import React from 'react';
-
-// const Songs = ({ songData, onSongClick }) => {
-//   return (
-//     <div>
-//       {songData.map((song) => (
-//         <div key={song.id} onClick={() => onSongClick(song)}>
-//           <h2>{song.songTitle}</h2>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default Songs;

@@ -1,6 +1,7 @@
-import { Row, Col, Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import { Container, Row, Col, Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import songData from "../data/songData";
+import BDLogo from "../assets/logos/BDLogo.svg";
 
 export default function Welcome() {
     const newestSong = [...songData]
@@ -11,110 +12,136 @@ export default function Welcome() {
 
     return (
         <>
-            <h1 className='m-4 fw-bold'>FirstName LastName</h1>
-            <h2 className="text-start">Arranger | Teacher | Singer</h2> 
+            <Container fluid className='p-5 text-end'>
+                <Row className="align-items-center text-md-start">
+                    <Col md="6">
+                        <h1 className="fw-bold">FirstName LastName</h1>
+                    </Col>
+                    <Col md="6">
+                        <h2>Arranger | Teacher | Singer</h2>
+                    </Col>
+                </Row>
+            </Container>
+
             <hr />
             <br />
+            <Container>
+                {/* Song Cards */}
+                <Row className="mb-5">
+                    <Col md="6" className="mb-4">
+                        <h4 className="text-center">What's New</h4>
+                        {newestSong && (
+                            <Link to={`/arrangements/${newestSong.pathExt}`} className="text-decoration-none">
+                                <Card inverse className="card-hover">
+                                    <CardImg
+                                        alt={newestSong.imageAlt}
+                                        src={newestSong.imagePath}
+                                        className=""
+                                    />
+                                    <CardImgOverlay>
+                                        <CardTitle tag="h5" className=" p-2 rounded">
+                                            {newestSong.songTitle}
+                                        </CardTitle>
+                                    </CardImgOverlay>
+                                </Card>
+                            </Link>
+                        )}
+                    </Col>
 
-            {/* Song Cards */}
-            <Row className="mb-5">
-                <Col md="6" className="mb-4">
-                    <h4 className="text-center">What's New</h4>
-                    {newestSong && (
-                        <Link to={`/arrangements/${newestSong.pathExt}`} className="text-decoration-none">
-                            <Card inverse className="card-hover">
-                                <CardImg
-                                    alt={newestSong.imageAlt}
-                                    src={newestSong.imagePath}
-                                    className="w-100"
-                                />
-                                <CardImgOverlay>
-                                    <CardTitle tag="h5" className=" p-2 rounded">
-                                        {newestSong.songTitle}
-                                    </CardTitle>
-                                </CardImgOverlay>
-                            </Card>
-                        </Link>
-                    )}
-                </Col>
+                    <Col md="6" className="mb-4">
+                        <h4 className="text-center">In the works</h4>
+                        {upcomingSong && (
+                            <Link to={`/arrangements/${upcomingSong.pathExt}`} className="text-decoration-none">
+                                <Card inverse className="card-hover">
+                                    <CardImg
+                                        alt={upcomingSong.imageAlt}
+                                        src={upcomingSong.imagePath}
+                                        className=""
+                                    />
+                                    <CardImgOverlay>
+                                        <CardTitle tag="h5" className="p-2 rounded">
+                                            {upcomingSong.songTitle}
+                                        </CardTitle>
+                                    </CardImgOverlay>
+                                </Card>
+                            </Link>
+                        )}
+                    </Col>
+                </Row>
 
-                <Col md="6" className="mb-4">
-                    <h4 className="text-center">In the works</h4>
-                    {upcomingSong && (
-                        <Link to={`/arrangements/${upcomingSong.pathExt}`} className="text-decoration-none">
-                            <Card inverse className="card-hover">
-                                <CardImg
-                                    alt={upcomingSong.imageAlt}
-                                    src={upcomingSong.imagePath}
-                                    className="w-100"
-                                />
-                                <CardImgOverlay>
-                                    <CardTitle tag="h5" className="p-2 rounded">
-                                        {upcomingSong.songTitle}
-                                    </CardTitle>
-                                </CardImgOverlay>
-                            </Card>
-                        </Link>
-                    )}
-                </Col>
-            </Row>
+                {/* Contact Section */}
+                <Row>
+                    <Col>
+                        <h4 className="text-center">Contact</h4>
+                        <h6 className="text-center">Have a question or want to make a request? Get in touch below.</h6>
+                        <Card className="p-4">
+                            <p>Contact form here. Reactstrap Form eventually, backend functionality through Netlify</p>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
 
-            {/* Contact Section */}
-            <Row>
-                <Col>
-                    <h4 className="text-center">Contact</h4> 
-                    <h6 className="text-center">Have a question or want to make a request? Get in touch below.</h6>
-                    <Card className="p-4">
-                        <p>Contact form here. Reactstrap Form eventually, backend functionality through Netlify</p>
-                    </Card>
-                </Col>
-            </Row>
         </>
     );
-}
+};
 
+//New container with logo background and responsive layout of h1 and h2
+{/* <Container fluid className="welcome-bg p-5">
+  {/* Title Row */}
+//   <Row className="align-items-center mb-4 text-center text-md-start">
+//     <Col md="6">
+//       <h1 className="fw-bold">FirstName LastName</h1>
+//     </Col>
+//     <Col md="6">
+//       <h2>Arranger | Teacher | Singer</h2>
+//     </Col>
+//   </Row>
 
+//   <hr className="mb-5" />
 
+{/* Song Cards */ }
+//   <Row className="mb-5">
+//     <Col md="6" className="mb-4">
+//       <h4 className="text-center">What's New</h4>
+//       {newestSong && (
+//         <Link to={`/arrangements/${newestSong.pathExt}`} className="text-decoration-none">
+//           <Card inverse className="card-hover">
+//             <CardImg alt={newestSong.imageAlt} src={newestSong.imagePath} />
+//             <CardImgOverlay>
+//               <CardTitle tag="h5" className="p-2 rounded">
+//                 {newestSong.songTitle}
+//               </CardTitle>
+//             </CardImgOverlay>
+//           </Card>
+//         </Link>
+//       )}
+//     </Col>
 
-// import { useState } from 'react';
-// import { Card, CardImg, CardImgOverlay } from 'reactstrap';
-// import songData from "../data/songData";
+//     <Col md="6" className="mb-4">
+//       <h4 className="text-center">In the works</h4>
+//       {upcomingSong && (
+//         <Link to={`/arrangements/${upcomingSong.pathExt}`} className="text-decoration-none">
+//           <Card inverse className="card-hover">
+//             <CardImg alt={upcomingSong.imageAlt} src={upcomingSong.imagePath} />
+//             <CardImgOverlay>
+//               <CardTitle tag="h5" className="p-2 rounded">
+//                 {upcomingSong.songTitle}
+//               </CardTitle>
+//             </CardImgOverlay>
+//           </Card>
+//         </Link>
+//       )}
+//     </Col>
+//   </Row>
 
-// export default function Welcome() {
-//     const [selectedSong, setSelectedSong] = useState(null);
-
-//     const handleSongClick = (songId) => {
-//         setSelectedSong(songId);
-//       };
-
-    
-
-//     return (
-//         <>
-//         {/* Need hero photo */}
-//             <h1 className='m-4 fw-bold'>FirstName LastName</h1>
-//             <h2 className="text-start">Arranger | Teacher | Singer</h2> 
-//             <hr />
-//             <br />
-//             <div>
-//                 <h4 className="text-start">What's New</h4>
-//                 <Card>
-//                 <p>Future card with image and overlay here. Maybe carousel through a few eventually?</p>
-//                 </Card>   
-//             </div>
-//             <div>
-//                 <h4 className="text-start">In the works</h4>
-//                 <Card>
-//                     <p>Single card here with title, voicing, and blurb</p>
-//                 </Card> 
-//             </div>
-//             <div>
-//                 <h4 className="text-start">Contact</h4> 
-//                 <h6 className="text-start">Have a question or want to make a request? Get in touch below.</h6>
-//                 <Card>
-//                     <p>Contact form here. Reactstrap Form eventually, backend functionality through Netlify</p>
-//                 </Card>
-//             </div>
-//         </>
-//     );
-// };
+{/* Contact Section */ }
+//   <Row>
+//     <Col>
+//       <h4 className="text-center">Contact</h4>
+//       <h6 className="text-center">Have a question or want to make a request? Get in touch below.</h6>
+//       <Card className="p-4">
+//         <p>Contact form here. Reactstrap Form eventually, backend functionality through Netlify</p>
+//       </Card>
+//     </Col>
+//   </Row>
+// </Container> 
