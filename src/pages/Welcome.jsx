@@ -25,7 +25,7 @@ export default function Welcome() {
 
             <hr />
             <br />
-            <Container>
+            <Container className='logo-bg'>
                 {/* Song Cards */}
                 <Row className="mb-5">
                     <Col md="6" className="mb-4">
@@ -86,7 +86,7 @@ export default function Welcome() {
 };
 
 //New container with logo background and responsive layout of h1 and h2
-{/* <Container fluid className="welcome-bg p-5">
+{/* <Container fluid className="logo-bg p-5">
   {/* Title Row */}
 //   <Row className="align-items-center mb-4 text-center text-md-start">
 //     <Col md="6">

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 //About Me page
 export default function About() {
     return (
-        <>
+        <div className='logo-bg'>
             <h3 className='m-4 fw-bold'>About Beth</h3>
             <hr />
             <br />
@@ -14,6 +14,6 @@ export default function About() {
             </div>
        <br />
        <br />
-        </>
+        </div>
     );
 };

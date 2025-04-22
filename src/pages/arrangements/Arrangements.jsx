@@ -25,7 +25,7 @@ export default function Arrangements() {
   // Apply sorting to the filtered data
   const getSortedSongs = () => {
     if (!sortOption) return filteredSongs;
-  
+
     const sorted = [...filteredSongs].sort((a, b) => {
       if (sortOption === 'composerLast') {
         return a.composerLast.localeCompare(b.composerLast);
@@ -39,17 +39,20 @@ export default function Arrangements() {
       }
       return 0;
     });
-  
+
     return sorted;
   };
-  
+
 
   const finalSongList = getSortedSongs();
 
   return (
     <>
       <h2>Arrangements</h2>
-      <Container fluid>
+      <hr />
+      <br />
+      
+      <Container>
         {/* <Row lg="3" md="2" sm="1" xs="1" className='d-flex justify-content-around p-2 bg-dark pt-4 pb-4'>
           <Col>
             <Sort onSortChange={handleSortChange} />
@@ -58,7 +61,10 @@ export default function Arrangements() {
             <Filter onFilterChange={handleFilterChange} />
           </Col>
         </Row> */}
-        <Row lg="3" md="2" sm="1" xs="1" className='d-flex justify-content-around p-2 bg-dark pt-4 pb-4'>
+      </Container>
+
+      <Container fluid className='logo-bg'>
+        <Row lg="3" md="2" sm="1" xs="1" className='d-flex justify-content-around p-2 pt-4 pb-4'>
           <Songs songData={finalSongList} onSongClick={handleSongClick} />
         </Row>
       </Container>

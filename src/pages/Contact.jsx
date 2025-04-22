@@ -13,7 +13,7 @@ export default function Contact() {
 
     return (
         <>
-            <div>
+            <div >
                 <h1 className='text-center pt-4'>
                     Contact Me
                 </h1>
@@ -26,12 +26,12 @@ export default function Contact() {
 
             {/* Conditionally render based on form submission */}
             {submitted ? (
-                <div className="text-center">
+                <div className="text-center logo-bg">
                     <h2>Thank you for contacting me!</h2>
                     <p>I'll get back to you as soon as possible.</p>
                 </div>
             ) : (
-                <Container fluid="md" className="px-3 px-md-6">
+                <Container fluid="md" className="px-3 px-md-6 logo-bg">
                     <Form className='pb-4' onSubmit={handleSubmit}>
                         <Row>
                             <Col md="6" className="mb-md-3 mb-1">
