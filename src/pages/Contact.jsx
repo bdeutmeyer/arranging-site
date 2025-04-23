@@ -29,12 +29,12 @@ export default function Contact() {
                     <hr className="mb-0 pb-0" />
                     <Container fluid="md" className="logo-bg sans-font-reg">
 
-                        <p className='text-center mt-0 pt-0'><small><cite>All fields required</cite></small></p>
+                        <p className='text-center mt-0 pt-0 text-secondary'><small><cite>All fields required</cite></small></p>
                     <Form className='pb-4 px-3 px-md-6' onSubmit={handleSubmit}>
                         <Row>
                             <Col md="6" className="mb-md-3 mb-1">
                                 <FormGroup>
-                                    <Label for="userName">
+                                    <Label for="userName" className='text-black'>
                                         Name
                                     </Label>
                                     <Input
@@ -42,6 +42,7 @@ export default function Contact() {
                                         name="name"
                                         placeholder="ex. First Last"
                                         type="text"
+                                        className='border border-dark shadow'
                                         required
                                     />
                                 </FormGroup>
@@ -49,7 +50,7 @@ export default function Contact() {
 
                             <Col md="6" className="mb-md-3 mb-1">
                                 <FormGroup>
-                                    <Label for="userEmail">
+                                    <Label for="userEmail" className='text-black'>
                                         Email
                                     </Label>
                                     <Input
@@ -57,7 +58,9 @@ export default function Contact() {
                                         name="email"
                                         placeholder="ex. biggestfan@email.com"
                                         type="email"
+                                        className='border border-dark shadow'
                                         required
+                                        
                                     />
                                 </FormGroup>
                             </Col>
@@ -66,14 +69,15 @@ export default function Contact() {
                         <Row>
                             <Col md="12" className="mb-md-3 mb-1">
                                 <FormGroup>
-                                    <Label for="textBox">Message</Label>
+                                    <Label for="textBox" className='text-black'>Message</Label>
                                     <Input
                                         id="textBox"
                                         name="text"
                                         placeholder="ex. You are my favorite arranger EVER! I can't wait to buy your entire catalog!"
                                         type="textarea"
+                                        style={{ minHeight: "150px" }}
+                                        className='border border-dark shadow' // makes it a couple rows taller
                                         required
-                                        style={{ minHeight: "150px" }} // makes it a couple rows taller
                                     />
                                 </FormGroup>
                             </Col>
@@ -81,7 +85,7 @@ export default function Contact() {
 
                         <Row>
                             <Col md="12" className="d-grid">
-                                <Button type="submit" color="dark" className="w-100">
+                                <Button type="submit" color="dark" className="w-100 shadow">
                                     Submit
                                 </Button>
                             </Col>

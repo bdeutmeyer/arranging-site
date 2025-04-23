@@ -9,7 +9,7 @@ export default function Songs({ songData, onSongClick }) {
             {songData.map(song => (
                 <Col key={song.id} onClick={() => onSongClick(song.id)}>
                     <Link to={`/arrangements/${song.pathExt}`}>
-                    <Card inverse className='m-3 card-hover'>
+                    <Card inverse className='m-3 card-hover shadow'>
                         <CardTitle className='bg-dark'>
                             {song.songTitle}
                         </CardTitle>

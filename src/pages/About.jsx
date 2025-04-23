@@ -6,7 +6,7 @@ export default function About() {
     return (
         <>
             <div className='page-header'>
-                <h1 className='m-4 fw-bold serif-font'>About Beth</h1>
+                <h1 className='m-4 serif-font'>About Beth</h1>
             </div>
             <hr />
             <br />

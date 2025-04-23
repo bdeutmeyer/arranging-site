@@ -36,10 +36,10 @@ export default function Welcome() {
 
                     {/* What's New card */}
                     <Col md="6" className="mb-4">
-                        <h4 className="text-center serif-font">What's New</h4>
+                        <h3 className="text-center serif-font">What's New</h3>
                         {newestSong && (
                             <Link to={`/arrangements/${newestSong.pathExt}`} className="text-decoration-none">
-                                <Card inverse className="card-hover">
+                                <Card inverse className="card-hover shadow">
                                     <CardImg
                                         alt={newestSong.imageAlt}
                                         src={newestSong.imagePath}
@@ -57,10 +57,10 @@ export default function Welcome() {
 
                     {/* In the Works card */}
                     <Col md="6" className="mb-4">
-                        <h4 className="text-center serif-font">In the Works</h4>
+                        <h3 className="text-center serif-font">In the Works</h3>
                         {upcomingSong && (
                             <Link to={`/arrangements/${upcomingSong.pathExt}`} className="text-decoration-none">
-                                <Card inverse className="card-hover">
+                                <Card inverse className="card-hover shadow">
                                     <CardImg
                                         alt={upcomingSong.imageAlt}
                                         src={upcomingSong.imagePath}
@@ -93,12 +93,12 @@ export default function Welcome() {
                             </Col>
                         </Row>
 
-                        <p className='text-center mt-0 pt-0'><small><cite>All fields required</cite></small></p>
+                        <p className='text-center mt-0 pt-0 text-secondary'><small><cite>All fields required</cite></small></p>
                         <Form className='pb-4' onSubmit={handleSubmit}>
                             <Row>
                                 <Col md="6" className="mb-md-3 mb-1 sans-font-reg">
                                     <FormGroup>
-                                        <Label for="userName">
+                                        <Label for="userName" className='text-black'>
                                             Name
                                         </Label>
                                         <Input
@@ -106,6 +106,7 @@ export default function Welcome() {
                                             name="name"
                                             placeholder="ex. First Last"
                                             type="text"
+                                            className='border border-dark shadow'
                                             required
                                         />
                                     </FormGroup>
@@ -113,7 +114,7 @@ export default function Welcome() {
 
                                 <Col md="6" className="mb-md-3 mb-1 sans-font-reg">
                                     <FormGroup>
-                                        <Label for="userEmail">
+                                        <Label for="userEmail" className='text-black'>
                                             Email
                                         </Label>
                                         <Input
@@ -121,6 +122,7 @@ export default function Welcome() {
                                             name="email"
                                             placeholder="ex. biggestfan@email.com"
                                             type="email"
+                                            className='border border-dark shadow'
                                             required
                                         />
                                     </FormGroup>
@@ -130,14 +132,15 @@ export default function Welcome() {
                             <Row>
                                 <Col md="12" className="mb-md-3 mb-1 sans-font-reg">
                                     <FormGroup>
-                                        <Label for="textBox">Message</Label>
+                                        <Label for="textBox" className='text-black'>Message</Label>
                                         <Input
                                             id="textBox"
                                             name="text"
                                             placeholder="ex. You are my favorite arranger EVER! I can't wait to buy your entire catalog!"
                                             type="textarea"
-                                            required
                                             style={{ minHeight: "150px" }} // makes it a couple rows taller
+                                            className='border border-dark shadow'
+                                            required
                                         />
                                     </FormGroup>
                                 </Col>
@@ -145,7 +148,7 @@ export default function Welcome() {
 
                             <Row>
                                 <Col md="12" className="d-grid">
-                                    <Button type="submit" color="dark" className="w-100">
+                                    <Button type="submit" color="dark" className="w-100 shadow">
                                         Submit
                                     </Button>
                                 </Col>
