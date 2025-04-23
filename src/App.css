@@ -1,4 +1,25 @@
-/* in your CSS file (e.g., Welcome.css) */
+.navitem:hover {
+  transform: scale(1.05)
+}
+
+.page-header {
+  min-height: 110px; /* adjust this value to your desired height */
+  max-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+}
+
 .logo-bg {
   background-image: url('/src/assets/logos/BDLogo.svg');
   background-repeat: no-repeat;
@@ -6,10 +27,6 @@
   background-size: contain;
   background-color: rgba(255, 255, 255, 0.95); /* semi-transparent overlay */
   background-blend-mode: lighten;
-}
-
-.navitem:hover {
-  transform: scale(1.05)
 }
 
 @font-face {

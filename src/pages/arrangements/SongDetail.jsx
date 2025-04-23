@@ -6,23 +6,28 @@ import songData from '../../data/songData';
 export default function SongDetail() {
     const { ext } = useParams();
     const song = songData.find((index) => index.pathExt == ext)
-    console.log(song);
 
     return (
         <>
-    <Container>
-        <Card>
-            <CardTitle>
-                {/* {console.log(song)} */}
-            </CardTitle>
-            <CardImg>
+            <div className='page-header'>
+                <h2 className='serif-font'>{song.songTitle}</h2>
+                <h4 className='sans-font-reg'>{song.composerFirst} {song.composerLast}</h4>
+            </div>
 
-            </CardImg>
-            <CardText>
+            <hr />
+            <br />
+            <Container fluid className='p-0'>
+                <Card>
+                    <CardTitle>
+                    </CardTitle>
+                    <CardImg>
 
-            </CardText>
-        </Card>
-    </Container>
+                    </CardImg>
+                    <CardText>
+
+                    </CardText>
+                </Card>
+            </Container>
         </>
     )
 };

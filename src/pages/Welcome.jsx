@@ -22,16 +22,10 @@ export default function Welcome() {
     return (
         <>
             {/* Hero section */}
-            <Container fluid className='p-5 text-end'>
-                <Row className="align-items-center text-md-start">
-                    <Col md="6">
-                        <h1 className="fw-bold serif-font">FirstName LastName</h1>
-                    </Col>
-                    <Col md="6">
-                        <h2 className='sans-font-reg'>Arranger | Teacher | Singer</h2>
-                    </Col>
-                </Row>
-            </Container>
+            <div className='text-center pt-5 page-header'>
+                        <h1 className='serif-font'>FirstName LastName</h1>
+                        <h5 className='sans-font-reg px-4'>Arranger | Teacher | Singer</h5>
+                    </div>
 
             <hr />
             <br />
@@ -84,7 +78,7 @@ export default function Welcome() {
                 </Row>
 
                 {/* Contact Section */}
-
+                <hr />
                 {submitted ? (
                     <div className="text-center sans-font-reg">
                         <h2>Thank you for contacting me!</h2>
@@ -94,10 +88,12 @@ export default function Welcome() {
                     <div>
                         <Row>
                             <Col>
-                                <h4 className="text-center serif-font">Contact</h4>
+                                <h3 className="text-center serif-font">Contact</h3>
                                 <h6 className="text-center sans-font-reg">Have a question or want to make a request? Get in touch below.</h6>
                             </Col>
                         </Row>
+
+                        <p className='text-center mt-0 pt-0'><small><cite>All fields required</cite></small></p>
                         <Form className='pb-4' onSubmit={handleSubmit}>
                             <Row>
                                 <Col md="6" className="mb-md-3 mb-1 sans-font-reg">
@@ -156,8 +152,6 @@ export default function Welcome() {
                             </Row>
                         </Form>
                     </div>
-
-
                 )}
             </Container>
         </>

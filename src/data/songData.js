@@ -1,23 +1,26 @@
-// import images from assets
-// To add songs: -check "upcoming" boolean of the last song, make sure all images have (x) aspect ratio, releaseDate format YYYY-MM-DD
+import danzaImg from "../assets/images/danza.png"
+// To add songs: -check "upcoming" boolean of the last song, print to pdf then use preview to crop and export as png then use Canva to crop to 5:4 aspect ratio, releaseDate format YYYY-MM-DD, category = treble/bass/mixed, accidentals: ♭♯♮𝄪𝄫, 
 const songData = [
     {
         id: 1,
-        pathExt: 'song-title1',
-        imagePath: 'Future variable defined in imports',
-        imageAlt: 'Image alt',
+        pathExt: 'danza-ttbb',
+        imagePath: danzaImg,
+        imageAlt: 'Danza, danza',
         purchaseLink: 'link',
-        composerLast: 'Beethoven',
-        composerFirst: 'Firstname',
-        songTitle: 'A',
-        songParts: 'SATB/SSAA, etc',
-        category: 'mixed',
-        accompaniment: 'piano + flute',
-        releaseDate: '2025-01-01',
+        composerLast: 'Durante',
+        composerFirst: 'Francesco',
+        songTitle: 'Danza, danza',
+        songParts: 'TTBB',
+        category: 'bass',
+        accompaniment: 'a cappella',
+        releaseDate: '2025-02-12',
         range: {
-            soprano: 'customize for specific songs here, only include actual parts'
+            tenor1: 'F3-G♭4',
+            tenor2: 'D♭3-F4',
+            bass1: 'B♭3-C4',
+            bass2: 'F2-B♭3'
         },
-        upcoming: true
+        upcoming: false
 
     },
     {
@@ -36,7 +39,7 @@ const songData = [
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
         },
-        upcoming: false
+        upcoming: true
     },
     {
         id: 3,
@@ -49,7 +52,7 @@ const songData = [
         songTitle: 'C',
         songParts: 'SATB/SSAA, etc',
         category: 'bass',
-        accompaniment: 'a cappella',
+        accompaniment: 'piano + flute',
         releaseDate: '2024-11-22',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'

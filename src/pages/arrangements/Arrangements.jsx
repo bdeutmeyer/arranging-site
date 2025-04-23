@@ -48,10 +48,10 @@ export default function Arrangements() {
 
   return (
     <>
-      <h2>Arrangements</h2>
+      <h1 className='page-header serif-font'>Arrangements</h1>
       <hr />
       <br />
-      
+
       <Container>
         {/* <Row lg="3" md="2" sm="1" xs="1" className='d-flex justify-content-around p-2 bg-dark pt-4 pb-4'>
           <Col>
