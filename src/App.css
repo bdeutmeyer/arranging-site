@@ -12,6 +12,33 @@
   transform: scale(1.05)
 }
 
+@font-face {
+  font-family: Maharlika;
+  src: url(../src/assets/fonts/Maharlika-Regular.ttf);
+}
+
+.serif-font {
+  font-family: Maharlika, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@font-face {
+  font-family: GlacialIndifference-Regular;
+  src: url(../src/assets/fonts/GlacialIndifference-Regular.otf);
+}
+
+.sans-font-reg {
+  font-family: GlacialIndifference-Regular, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@font-face {
+  font-family: GlacialIndifference-Bold;
+  src: url(../src/assets/fonts/GlacialIndifference-Bold.otf);
+}
+
+.sans-font-bold {
+  font-family: GlacialIndifference-Bold, Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* 
 
 #root {

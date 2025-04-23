@@ -17,7 +17,7 @@ export default function Navigation() {
       key={index}
       to={path}
       onClick={() => setCurrentPage(path)}
-      className={`nav-link ${currentPage === path ? 'active text-decoration-underline fw-bold' : 'text-dark'}`}
+      className={`nav-link ${currentPage === path ? 'active text-decoration-underline' : 'text-dark'}`}
     >
       {label}
     </Link>

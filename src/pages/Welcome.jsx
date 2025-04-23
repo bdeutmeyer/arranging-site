@@ -1,7 +1,7 @@
-import { Container, Row, Col, Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
+import { Container, Row, Col, Card, CardImg, CardImgOverlay, CardTitle, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import songData from "../data/songData";
-import BDLogo from "../assets/logos/BDLogo.svg";
 
 export default function Welcome() {
     const newestSong = [...songData]
@@ -10,26 +10,39 @@ export default function Welcome() {
 
     const upcomingSong = songData.find(song => song.upcoming);
 
+    // State to track form submission
+    const [submitted, setSubmitted] = useState(false);
+
+    // Handle form submission (for now, just toggle the submitted state)
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevent default form submission behavior
+        setSubmitted(true);  // Set submitted to true, to show the thank you message
+    };
+
     return (
         <>
+            {/* Hero section */}
             <Container fluid className='p-5 text-end'>
                 <Row className="align-items-center text-md-start">
                     <Col md="6">
-                        <h1 className="fw-bold">FirstName LastName</h1>
+                        <h1 className="fw-bold serif-font">FirstName LastName</h1>
                     </Col>
                     <Col md="6">
-                        <h2>Arranger | Teacher | Singer</h2>
+                        <h2 className='sans-font-reg'>Arranger | Teacher | Singer</h2>
                     </Col>
                 </Row>
             </Container>
 
             <hr />
             <br />
-            <Container className='logo-bg'>
-                {/* Song Cards */}
+
+            {/* Main page content */}
+            <Container fluid="md" className='logo-bg px-3 px-md-6'>
                 <Row className="mb-5">
+
+                    {/* What's New card */}
                     <Col md="6" className="mb-4">
-                        <h4 className="text-center">What's New</h4>
+                        <h4 className="text-center serif-font">What's New</h4>
                         {newestSong && (
                             <Link to={`/arrangements/${newestSong.pathExt}`} className="text-decoration-none">
                                 <Card inverse className="card-hover">
@@ -48,8 +61,9 @@ export default function Welcome() {
                         )}
                     </Col>
 
+                    {/* In the Works card */}
                     <Col md="6" className="mb-4">
-                        <h4 className="text-center">In the works</h4>
+                        <h4 className="text-center serif-font">In the Works</h4>
                         {upcomingSong && (
                             <Link to={`/arrangements/${upcomingSong.pathExt}`} className="text-decoration-none">
                                 <Card inverse className="card-hover">
@@ -70,78 +84,82 @@ export default function Welcome() {
                 </Row>
 
                 {/* Contact Section */}
-                <Row>
-                    <Col>
-                        <h4 className="text-center">Contact</h4>
-                        <h6 className="text-center">Have a question or want to make a request? Get in touch below.</h6>
-                        <Card className="p-4">
-                            <p>Contact form here. Reactstrap Form eventually, backend functionality through Netlify</p>
-                        </Card>
-                    </Col>
-                </Row>
-            </Container>
 
+                {submitted ? (
+                    <div className="text-center sans-font-reg">
+                        <h2>Thank you for contacting me!</h2>
+                        <p>I'll get back to you as soon as possible.</p>
+                    </div>
+                ) : (
+                    <div>
+                        <Row>
+                            <Col>
+                                <h4 className="text-center serif-font">Contact</h4>
+                                <h6 className="text-center sans-font-reg">Have a question or want to make a request? Get in touch below.</h6>
+                            </Col>
+                        </Row>
+                        <Form className='pb-4' onSubmit={handleSubmit}>
+                            <Row>
+                                <Col md="6" className="mb-md-3 mb-1 sans-font-reg">
+                                    <FormGroup>
+                                        <Label for="userName">
+                                            Name
+                                        </Label>
+                                        <Input
+                                            id="userName"
+                                            name="name"
+                                            placeholder="ex. First Last"
+                                            type="text"
+                                            required
+                                        />
+                                    </FormGroup>
+                                </Col>
+
+                                <Col md="6" className="mb-md-3 mb-1 sans-font-reg">
+                                    <FormGroup>
+                                        <Label for="userEmail">
+                                            Email
+                                        </Label>
+                                        <Input
+                                            id="userEmail"
+                                            name="email"
+                                            placeholder="ex. biggestfan@email.com"
+                                            type="email"
+                                            required
+                                        />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col md="12" className="mb-md-3 mb-1 sans-font-reg">
+                                    <FormGroup>
+                                        <Label for="textBox">Message</Label>
+                                        <Input
+                                            id="textBox"
+                                            name="text"
+                                            placeholder="ex. You are my favorite arranger EVER! I can't wait to buy your entire catalog!"
+                                            type="textarea"
+                                            required
+                                            style={{ minHeight: "150px" }} // makes it a couple rows taller
+                                        />
+                                    </FormGroup>
+                                </Col>
+                            </Row>
+
+                            <Row>
+                                <Col md="12" className="d-grid">
+                                    <Button type="submit" color="dark" className="w-100">
+                                        Submit
+                                    </Button>
+                                </Col>
+                            </Row>
+                        </Form>
+                    </div>
+
+
+                )}
+            </Container>
         </>
     );
 };
-
-//New container with logo background and responsive layout of h1 and h2
-{/* <Container fluid className="logo-bg p-5">
-  {/* Title Row */}
-//   <Row className="align-items-center mb-4 text-center text-md-start">
-//     <Col md="6">
-//       <h1 className="fw-bold">FirstName LastName</h1>
-//     </Col>
-//     <Col md="6">
-//       <h2>Arranger | Teacher | Singer</h2>
-//     </Col>
-//   </Row>
-
-//   <hr className="mb-5" />
-
-{/* Song Cards */ }
-//   <Row className="mb-5">
-//     <Col md="6" className="mb-4">
-//       <h4 className="text-center">What's New</h4>
-//       {newestSong && (
-//         <Link to={`/arrangements/${newestSong.pathExt}`} className="text-decoration-none">
-//           <Card inverse className="card-hover">
-//             <CardImg alt={newestSong.imageAlt} src={newestSong.imagePath} />
-//             <CardImgOverlay>
-//               <CardTitle tag="h5" className="p-2 rounded">
-//                 {newestSong.songTitle}
-//               </CardTitle>
-//             </CardImgOverlay>
-//           </Card>
-//         </Link>
-//       )}
-//     </Col>
-
-//     <Col md="6" className="mb-4">
-//       <h4 className="text-center">In the works</h4>
-//       {upcomingSong && (
-//         <Link to={`/arrangements/${upcomingSong.pathExt}`} className="text-decoration-none">
-//           <Card inverse className="card-hover">
-//             <CardImg alt={upcomingSong.imageAlt} src={upcomingSong.imagePath} />
-//             <CardImgOverlay>
-//               <CardTitle tag="h5" className="p-2 rounded">
-//                 {upcomingSong.songTitle}
-//               </CardTitle>
-//             </CardImgOverlay>
-//           </Card>
-//         </Link>
-//       )}
-//     </Col>
-//   </Row>
-
-{/* Contact Section */ }
-//   <Row>
-//     <Col>
-//       <h4 className="text-center">Contact</h4>
-//       <h6 className="text-center">Have a question or want to make a request? Get in touch below.</h6>
-//       <Card className="p-4">
-//         <p>Contact form here. Reactstrap Form eventually, backend functionality through Netlify</p>
-//       </Card>
-//     </Col>
-//   </Row>
-// </Container> 

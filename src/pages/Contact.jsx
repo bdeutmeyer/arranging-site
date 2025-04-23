@@ -13,16 +13,6 @@ export default function Contact() {
 
     return (
         <>
-            <div >
-                <h1 className='text-center pt-4'>
-                    Contact Me
-                </h1>
-                <h4 className='text-center px-4'>
-                    Comments? Questions? Requests? Submit them below.
-                </h4>
-                <hr className='mb-0 pb-0' />
-                <p className='text-center mt-0 pt-0'><small><cite>All fields required</cite></small></p>
-            </div>
 
             {/* Conditionally render based on form submission */}
             {submitted ? (
@@ -32,6 +22,16 @@ export default function Contact() {
                 </div>
             ) : (
                 <Container fluid="md" className="px-3 px-md-6 logo-bg">
+                                <div >
+                <h1 className='text-center pt-4'>
+                    Contact Me
+                </h1>
+                <h4 className='text-center px-4'>
+                    Comments? Questions? Requests? Submit them below.
+                </h4>
+                <hr className='mb-0 pb-0' />
+                <p className='text-center mt-0 pt-0'><small><cite>All fields required</cite></small></p>
+            </div>
                     <Form className='pb-4' onSubmit={handleSubmit}>
                         <Row>
                             <Col md="6" className="mb-md-3 mb-1">
