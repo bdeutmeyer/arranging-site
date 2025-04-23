@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, CardImg, CardImgOverlay, CardTitle, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, CardText, CardImg, CardImgOverlay, CardTitle, CardSubtitle, Form, FormGroup, Label, Input, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import songData from "../data/songData";
@@ -23,9 +23,9 @@ export default function Welcome() {
         <>
             {/* Hero section */}
             <div className='text-center pt-5 page-header'>
-                        <h1 className='serif-font'>FirstName LastName</h1>
-                        <h5 className='sans-font-reg px-4'>Arranger | Teacher | Singer</h5>
-                    </div>
+                <h1 className='serif-font'>FirstName LastName</h1>
+                <h5 className='sans-font-reg px-4'>Arranger | Teacher | Singer</h5>
+            </div>
 
             <hr />
             <br />
@@ -35,21 +35,29 @@ export default function Welcome() {
                 <Row className="mb-5">
 
                     {/* What's New card */}
+
                     <Col md="6" className="mb-4">
                         <h3 className="text-center serif-font">What's New</h3>
                         {newestSong && (
                             <Link to={`/arrangements/${newestSong.pathExt}`} className="text-decoration-none">
-                                <Card inverse className="card-hover shadow">
-                                    <CardImg
-                                        alt={newestSong.imageAlt}
-                                        src={newestSong.imagePath}
-                                        className=""
-                                    />
-                                    <CardImgOverlay>
-                                        <CardTitle tag="h5" className=" p-2 rounded">
-                                            {newestSong.songTitle}
-                                        </CardTitle>
-                                    </CardImgOverlay>
+                                <Card className="card-hover shadow sans-font-reg">
+                                    <Row className="g-0"> {/* "g-0" removes gutter spacing between cols */}
+                                        <Col md="6">
+                                            <CardImg
+                                                src={newestSong.imagePath}
+                                                alt={newestSong.imageAlt}
+                                                className="img-fluid rounded-start shadow"
+                                            />
+                                        </Col>
+                                        <Col md="6">
+                                            <CardBody className='ps-4'>
+                                                <CardTitle tag="h5" className='rounded'>{newestSong.songTitle}</CardTitle>
+                                                <CardSubtitle>{newestSong.composerFirst} {newestSong.composerLast}</CardSubtitle>
+                                                <hr />
+                                                <CardText>{newestSong.songParts}{newestSong.accompDescr}</CardText>
+                                            </CardBody>
+                                        </Col>
+                                    </Row>
                                 </Card>
                             </Link>
                         )}
@@ -60,17 +68,24 @@ export default function Welcome() {
                         <h3 className="text-center serif-font">In the Works</h3>
                         {upcomingSong && (
                             <Link to={`/arrangements/${upcomingSong.pathExt}`} className="text-decoration-none">
-                                <Card inverse className="card-hover shadow">
-                                    <CardImg
-                                        alt={upcomingSong.imageAlt}
-                                        src={upcomingSong.imagePath}
-                                        className=""
-                                    />
-                                    <CardImgOverlay>
-                                        <CardTitle tag="h5" className="p-2 rounded">
-                                            {upcomingSong.songTitle}
-                                        </CardTitle>
-                                    </CardImgOverlay>
+                                <Card className="card-hover shadow sans-font-reg">
+                                    <Row className="g-0"> {/* "g-0" removes gutter spacing between cols */}
+                                        <Col md="6">
+                                            <CardImg
+                                                src={upcomingSong.imagePath}
+                                                alt={upcomingSong.imageAlt}
+                                                className="img-fluid rounded-start shadow"
+                                            />
+                                        </Col>
+                                        <Col md="6">
+                                            <CardBody className='ps-4'>
+                                                <CardTitle tag="h5" className='rounded'>{upcomingSong.songTitle}</CardTitle>
+                                                <CardSubtitle>{upcomingSong.composerFirst} {upcomingSong.composerLast}</CardSubtitle>
+                                                <hr />
+                                                <CardText>{upcomingSong.songParts}{upcomingSong.accompDescr}</CardText>
+                                            </CardBody>
+                                        </Col>
+                                    </Row>
                                 </Card>
                             </Link>
                         )}

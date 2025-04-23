@@ -1,9 +1,9 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import NavBar from './NavBar';
 
 export default function Navigation() {
-  const [currentPage, setCurrentPage] = useState('/');
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   const navItems = [
     { path: '/', label: 'Home' },
@@ -16,8 +16,7 @@ export default function Navigation() {
     <Link
       key={index}
       to={path}
-      onClick={() => setCurrentPage(path)}
-      className={`nav-link ${currentPage === path ? 'active text-decoration-underline' : 'text-dark'}`}
+      className={`nav-link ${currentPath === path ? 'active text-decoration-underline' : 'text-dark'}`}
     >
       {label}
     </Link>
@@ -25,3 +24,32 @@ export default function Navigation() {
 
   return <NavBar links={links} />;
 };
+
+
+// import { useState } from 'react';
+// import { Link } from 'react-router-dom';
+// import NavBar from './NavBar';
+
+// export default function Navigation() {
+//   const [currentPage, setCurrentPage] = useState('/');
+
+//   const navItems = [
+//     { path: '/', label: 'Home' },
+//     { path: '/arrangements', label: 'Arrangements' },
+//     { path: '/about', label: 'About' },
+//     { path: '/contact', label: 'Contact' },
+//   ];
+
+//   const links = navItems.map(({ path, label }, index) => (
+//     <Link
+//       key={index}
+//       to={path}
+//       onClick={() => setCurrentPage(path)}
+//       className={`nav-link ${currentPage === path ? 'active text-decoration-underline' : 'text-dark'}`}
+//     >
+//       {label}
+//     </Link>
+//   ));
+
+//   return <NavBar links={links} />;
+// };

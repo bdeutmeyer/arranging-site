@@ -1,5 +1,6 @@
 import danzaImg from "../assets/images/danza.png"
-// To add songs: -check "upcoming" boolean of the last song, print to pdf then use preview to crop and export as png then use Canva to crop to 5:4 aspect ratio, releaseDate format YYYY-MM-DD, category = treble/bass/mixed, accidentals: ♭♯♮𝄪𝄫, 
+import sicutImg from "../assets/images/sicut.png"
+// To add songs: -check "upcoming" boolean of the last song, print to pdf then use preview to export p. 1 as png, releaseDate format YYYY-MM-DD, category = treble/bass/mixed, accidentals: ♭♯♮𝄪𝄫, accompaniment = a cappella
 const songData = [
     {
         id: 1,
@@ -12,7 +13,8 @@ const songData = [
         songTitle: 'Danza, danza',
         songParts: 'TTBB',
         category: 'bass',
-        accompaniment: 'a cappella',
+        accompaniment: 'pianoOnly',
+        accompDescr: ' and piano',
         releaseDate: '2025-02-12',
         range: {
             tenor1: 'F3-G♭4',
@@ -25,19 +27,23 @@ const songData = [
     },
     {
         id: 2,
-        pathExt: 'song-title2',
-        imagePath: 'Future variable defined in imports',
-        imageAlt: 'Image alt',
+        pathExt: 'sicut-SSAA',
+        imagePath: sicutImg,
+        imageAlt: 'Sicut Cervus',
         purchaseLink: 'link',
-        composerLast: 'Lastname',
-        composerFirst: 'Firstname',
-        songTitle: 'B',
-        songParts: 'SATB/SSAA, etc',
+        composerLast: 'da Palestrina',
+        composerFirst: 'Giovanni Pierluigi',
+        songTitle: 'Sicut Cervus',
+        songParts: 'SSAA',
         category: 'treble',
-        accompaniment: 'piano',
-        releaseDate: '2025-01-15',
+        accompaniment: 'aCappella',
+        accompDescr: ', a cappella',
+        releaseDate: '', //real date for when it's not a test subject anymore: 2025-02-16
         range: {
-            soprano: 'customize for specific songs here, only include actual parts'
+            soprano1: 'E4-E5',
+            soprano2: 'A3-D5',
+            alto1: 'G♯3-D5',
+            alto2: 'F♯3-B4'
         },
         upcoming: true
     },
@@ -52,7 +58,8 @@ const songData = [
         songTitle: 'C',
         songParts: 'SATB/SSAA, etc',
         category: 'bass',
-        accompaniment: 'piano + flute',
+        accompaniment: 'otherInstr',
+        accompDescr: '',
         releaseDate: '2024-11-22',
         range: {
             soprano: 'customize for specific songs here, only include actual parts'
