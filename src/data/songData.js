@@ -17,10 +17,10 @@ const songData = [
         accompDescr: ' and piano',
         releaseDate: '2025-02-12',
         range: {
-            tenor1: 'F3-G♭4',
-            tenor2: 'D♭3-F4',
-            bass1: 'B♭3-C4',
-            bass2: 'F2-B♭3'
+            tenor1: 'F3 - G♭4',
+            tenor2: 'D♭3 - F4',
+            bass1: 'B♭3 - C4',
+            bass2: 'F2 - B♭3'
         },
         upcoming: false
 
