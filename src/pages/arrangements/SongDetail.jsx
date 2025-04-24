@@ -21,10 +21,17 @@ export default function SongDetail() {
                         <h5>Range:</h5>
                         <ul className="list-unstyled" style={{ fontFamily: 'Arial' }}>
                             {Object.entries(song.range).map(([part, notes]) => (
-                                <li key={part} className='ps-4'>
+                                <li key={part} className='ps-4 ranges'>
                                     {part.replace(/(\w+)(\d)/, (_, voice, number) =>
                                         `${voice.charAt(0).toUpperCase() + voice.slice(1)} ${number}`
-                                    )}: {notes} 
+                                    )}: {notes.split(/([♭♯♮𝄪𝄫])/).map((char, i) =>
+                                    ['♭', '♯', '♮', '𝄪', '𝄫'].includes(char) ? (
+                                      <span key={i} style={{ fontFamily: 'Courier New' }}>{char}</span>
+                                    ) : (
+                                      <React.Fragment key={i}>{char}</React.Fragment>
+                                    )
+                                  )}
+                                  
                                 </li>
                             ))}
                         </ul>

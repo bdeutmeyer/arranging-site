@@ -9,7 +9,7 @@ export default function Songs({ songData, onSongClick }) {
             {songData.map(song => (
                 <Col key={song.id} onClick={() => onSongClick(song.id)}>
                     <Link to={`/arrangements/${song.pathExt}`} className='text-decoration-none'>
-                    <Card className="songcard-link shadow sans-font-reg m-2">
+                    <Card className="songcard-link shadow sans-font-reg m-2 mb-4">
                                     <Row className="g-0"> {/* "g-0" removes gutter spacing between cols */}
                                         <Col xs="6">
                                             <CardImg

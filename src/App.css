@@ -33,6 +33,10 @@
   transform: scale(1.02)
 }
 
+.ranges {
+  letter-spacing: normal;
+}
+
 @font-face {
   font-family: Maharlika;
   src: url(../src/assets/fonts/Maharlika-Regular.ttf);
