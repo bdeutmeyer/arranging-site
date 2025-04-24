@@ -42,14 +42,14 @@ export default function Welcome() {
                             <Link to={`/arrangements/${newestSong.pathExt}`} className="text-decoration-none">
                                 <Card className="card-hover shadow sans-font-reg">
                                     <Row className="g-0"> {/* "g-0" removes gutter spacing between cols */}
-                                        <Col md="6">
+                                        <Col xs="6" md="6">
                                             <CardImg
                                                 src={newestSong.imagePath}
                                                 alt={newestSong.imageAlt}
                                                 className="img-fluid rounded-start shadow"
                                             />
                                         </Col>
-                                        <Col md="6">
+                                        <Col xs="6" md="6">
                                             <CardBody className='ps-4'>
                                                 <CardTitle tag="h5" className='rounded'>{newestSong.songTitle}</CardTitle>
                                                 <CardSubtitle>{newestSong.composerFirst} {newestSong.composerLast}</CardSubtitle>
@@ -70,14 +70,14 @@ export default function Welcome() {
                             <Link to={`/arrangements/${upcomingSong.pathExt}`} className="text-decoration-none">
                                 <Card className="card-hover shadow sans-font-reg">
                                     <Row className="g-0"> {/* "g-0" removes gutter spacing between cols */}
-                                        <Col md="6">
+                                        <Col xs="6" md="6">
                                             <CardImg
                                                 src={upcomingSong.imagePath}
                                                 alt={upcomingSong.imageAlt}
                                                 className="img-fluid rounded-start shadow"
                                             />
                                         </Col>
-                                        <Col md="6">
+                                        <Col xs="6" md="6">
                                             <CardBody className='ps-4'>
                                                 <CardTitle tag="h5" className='rounded'>{upcomingSong.songTitle}</CardTitle>
                                                 <CardSubtitle>{upcomingSong.composerFirst} {upcomingSong.composerLast}</CardSubtitle>
