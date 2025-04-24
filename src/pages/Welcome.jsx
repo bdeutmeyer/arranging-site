@@ -35,21 +35,20 @@ export default function Welcome() {
                 <Row className="mb-5">
 
                     {/* What's New card */}
-
                     <Col md="6" className="mb-4">
                         <h3 className="text-center serif-font">What's New</h3>
                         {newestSong && (
                             <Link to={`/arrangements/${newestSong.pathExt}`} className="text-decoration-none">
-                                <Card className="card-hover shadow sans-font-reg">
+                                <Card className="songcard-link shadow sans-font-reg">
                                     <Row className="g-0"> {/* "g-0" removes gutter spacing between cols */}
-                                        <Col xs="6" md="6">
+                                        <Col xs="6">
                                             <CardImg
                                                 src={newestSong.imagePath}
                                                 alt={newestSong.imageAlt}
                                                 className="img-fluid rounded-start shadow"
                                             />
                                         </Col>
-                                        <Col xs="6" md="6">
+                                        <Col xs="6">
                                             <CardBody className='ps-4'>
                                                 <CardTitle tag="h5" className='rounded'>{newestSong.songTitle}</CardTitle>
                                                 <CardSubtitle>{newestSong.composerFirst} {newestSong.composerLast}</CardSubtitle>
@@ -68,16 +67,16 @@ export default function Welcome() {
                         <h3 className="text-center serif-font">In the Works</h3>
                         {upcomingSong && (
                             <Link to={`/arrangements/${upcomingSong.pathExt}`} className="text-decoration-none">
-                                <Card className="card-hover shadow sans-font-reg">
+                                <Card className="songcard-link shadow sans-font-reg">
                                     <Row className="g-0"> {/* "g-0" removes gutter spacing between cols */}
-                                        <Col xs="6" md="6">
+                                        <Col xs="6">
                                             <CardImg
                                                 src={upcomingSong.imagePath}
                                                 alt={upcomingSong.imageAlt}
                                                 className="img-fluid rounded-start shadow"
                                             />
                                         </Col>
-                                        <Col xs="6" md="6">
+                                        <Col xs="6">
                                             <CardBody className='ps-4'>
                                                 <CardTitle tag="h5" className='rounded'>{upcomingSong.songTitle}</CardTitle>
                                                 <CardSubtitle>{upcomingSong.composerFirst} {upcomingSong.composerLast}</CardSubtitle>

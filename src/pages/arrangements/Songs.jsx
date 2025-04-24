@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Card, CardImg, CardText, CardImgOverlay, CardTitle, CardLink, Col } from 'reactstrap';
+import { Card, CardImg, CardText, CardTitle, CardSubtitle, CardLink, CardBody, Row, Col } from 'reactstrap';
 import React, { useState } from 'react';
 
 //Project cards
@@ -8,32 +8,26 @@ export default function Songs({ songData, onSongClick }) {
         <>
             {songData.map(song => (
                 <Col key={song.id} onClick={() => onSongClick(song.id)}>
-                    <Link to={`/arrangements/${song.pathExt}`}>
-                    <Card inverse className='m-3 card-hover shadow'>
-                        <CardTitle className='bg-dark'>
-                            {song.songTitle}
-                        </CardTitle>
-                        {/* <CardImg
-                            alt={detail.imageAlt}
-                            src={detail.imagePath}
-                            className='w-100 h-auto screenshot'
-                        />
-                        <div className='container p-3'>
-                            <CardImgOverlay className="overlay">
-                                <div className='row'>
-                                    <CardLink href={detail.purchaseLink} className='col text-decoration-none'>
-                                        <CardTitle tag="h5" className='text-black fw-bold fs-6 spectral p-3 hidden-link'>
-                                            {detail.songTitle}
-                                        </CardTitle>
-                                    </CardLink>
-                                </div>
-                                <div className='row'>
-                                    <CardText className='text-dark h-75 card-text'>{detail.songSubtitle}</CardText>
-                                </div>
-                            </CardImgOverlay> */}
-                        {/* </div> */}
-
-                    </Card>
+                    <Link to={`/arrangements/${song.pathExt}`} className='text-decoration-none'>
+                    <Card className="songcard-link shadow sans-font-reg m-2">
+                                    <Row className="g-0"> {/* "g-0" removes gutter spacing between cols */}
+                                        <Col xs="6">
+                                            <CardImg
+                                                src={song.imagePath}
+                                                alt={song.imageAlt}
+                                                className="img-fluid rounded-start shadow"
+                                            />
+                                        </Col>
+                                        <Col xs="6">
+                                            <CardBody className='ps-4'>
+                                                <CardTitle tag="h5" className='rounded'>{song.songTitle}</CardTitle>
+                                                <CardSubtitle>{song.composerFirst} {song.composerLast}</CardSubtitle>
+                                                <hr />
+                                                <CardText>{song.songParts}{song.accompDescr}</CardText>
+                                            </CardBody>
+                                        </Col>
+                                    </Row>
+                                </Card>
                     </Link>
 
                 </Col>

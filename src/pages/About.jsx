@@ -12,7 +12,7 @@ export default function About() {
             <br />
             <div>
                 {/* <img src={headshot} alt="Beth Deutmeyer headshot" className="float-start me-3 rounded shadow" width="15%"/> */}
-                <p className="text-start">Beth Deutmeyer is...</p>
+                <p className="text-start sans-font-reg">Beth Deutmeyer is...</p>
             </div>
         </>
 

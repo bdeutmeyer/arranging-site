@@ -29,6 +29,10 @@
   background-blend-mode: lighten;
 }
 
+.songcard-link:hover {
+  transform: scale(1.02)
+}
+
 @font-face {
   font-family: Maharlika;
   src: url(../src/assets/fonts/Maharlika-Regular.ttf);
