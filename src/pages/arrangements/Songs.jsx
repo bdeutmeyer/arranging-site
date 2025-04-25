@@ -21,6 +21,9 @@ export default function Songs({ songData, onSongClick }) {
                                         <Col xs="6">
                                             <CardBody className='ps-4'>
                                                 <CardTitle tag="h5" className='rounded'>{song.songTitle}</CardTitle>
+                                                {song.songSubtitle ? (
+                                                    <CardText>{song.songSubtitle}</CardText>
+                                                ) : (<></>)}
                                                 <CardSubtitle>{song.composerFirst} {song.composerLast}</CardSubtitle>
                                                 <hr />
                                                 <CardText>{song.songParts}{song.accompDescr}</CardText>

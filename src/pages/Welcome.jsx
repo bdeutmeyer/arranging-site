@@ -1,4 +1,4 @@
-import { Container, Row, Col, Card, CardBody, CardText, CardImg, CardImgOverlay, CardTitle, CardSubtitle, Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import { Container, Row, Col, Card, CardBody, CardText, CardImg, CardImgOverlay, CardTitle, CardSubtitle, Form, FormGroup, Label, Input, Button, } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import songData from "../data/songData";
@@ -51,6 +51,9 @@ export default function Welcome() {
                                         <Col xs="6">
                                             <CardBody className='ps-4'>
                                                 <CardTitle tag="h5" className='rounded'>{newestSong.songTitle}</CardTitle>
+                                                {newestSong.songSubtitle ? (
+                                                    <CardText>{newestSong.songSubtitle}</CardText>
+                                                ) : (<></>)}
                                                 <CardSubtitle>{newestSong.composerFirst} {newestSong.composerLast}</CardSubtitle>
                                                 <hr />
                                                 <CardText>{newestSong.songParts}{newestSong.accompDescr}</CardText>
@@ -79,6 +82,9 @@ export default function Welcome() {
                                         <Col xs="6">
                                             <CardBody className='ps-4'>
                                                 <CardTitle tag="h5" className='rounded'>{upcomingSong.songTitle}</CardTitle>
+                                                {upcomingSong.songSubtitle ? (
+                                                    <CardText>{upcomingSong.songSubtitle}</CardText>
+                                                ) : (<></>)}
                                                 <CardSubtitle>{upcomingSong.composerFirst} {upcomingSong.composerLast}</CardSubtitle>
                                                 <hr />
                                                 <CardText>{upcomingSong.songParts}{upcomingSong.accompDescr}</CardText>
