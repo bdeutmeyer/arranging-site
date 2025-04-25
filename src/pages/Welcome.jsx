@@ -180,3 +180,108 @@ export default function Welcome() {
         </>
     );
 };
+
+// Great small screen look, but stacked in large
+{/* <div className='text-center pt-5 page-header'>
+    <Container fluid>
+        <Row className='align-items-center justify-content-between text-start gx-2'> */}
+            {/* Text block: h1 + h5 */}
+            {/* <Col xs="8" md="5">
+                <div className="d-flex flex-column align-items-start">
+                    <h1 className='serif-font'>FirstName LastName</h1>
+                    <h5 className='sans-font-reg'>Arranger | Teacher | Singer</h5>
+                </div>
+            </Col> */}
+
+            {/* Logo */}
+            {/* <Col xs="4" md="2" className="text-end">
+                <img
+                    src={BDLogo}
+                    alt="BD Logo"
+                    style={{ height: '80px', maxWidth: '100%', objectFit: 'contain' }}
+                />
+            </Col>
+        </Row>
+    </Container>
+</div> */}
+
+
+// Desired layout change, but weird padding:
+{/* <div className='text-center pt-5 page-header'>
+    <Container fluid>
+        <Row className='align-items-center text-center text-md-start gx-2'> */}
+            {/* Left: h1 */}
+            {/* <Col xs="8" md="5">
+                <h1 className='serif-font'>FirstName LastName</h1>
+            </Col> */}
+
+            {/* Center: Logo */}
+            {/* <Col xs="4" md="2" className="text-end text-md-center">
+                <img
+                    src={BDLogo}
+                    alt="BD Logo"
+                    style={{ height: '80px', maxWidth: '100%', objectFit: 'contain' }}
+                />
+            </Col> */}
+
+            {/* Right: h5 */}
+            {/* <Col xs="12" md="5" className="mt-3 mt-md-0">
+                <h5 className='sans-font-reg px-md-4'>Arranger | Teacher | Singer</h5>
+            </Col>
+        </Row>
+    </Container>
+</div> */}
+
+
+//Good padding and justification but stacked:
+{/* <div className='pt-5 page-header'>
+    <Container fluid>
+        <Row className='align-items-center gx-2'> */}
+            {/* Left: h1 */}
+            {/* <Col xs="8" md="5" className="text-start">
+                <h1 className='serif-font mb-2'>FirstName LastName</h1>
+                <h5 className='sans-font-reg'>Arranger | Teacher | Singer</h5>
+            </Col> */}
+
+            {/* Center: Logo */}
+            {/* <Col xs="4" md="2" className="text-end text-md-center mt-3 mt-md-0">
+                <img
+                    src={BDLogo}
+                    alt="BD Logo"
+                    style={{ height: '80px', maxWidth: '100%', objectFit: 'contain' }}
+                />
+            </Col> */}
+
+            {/* Right spacer on large screens only */}
+            {/* <Col xs="0" md="5" />
+        </Row>
+    </Container>
+</div> */}
+
+
+
+// Last thing from ChatGPT (worst one?)
+{/* <div className='pt-5 page-header'>
+    <Container fluid>
+        <Row className='align-items-center gx-2'>
+            {/* h1 left */}
+            // <Col xs="12" md="4" className="text-start">
+            //     <h1 className='serif-font mb-2'>FirstName LastName</h1>
+            // </Col> */}
+
+            {/* logo center */}
+            {/* <Col xs="12" md="4" className="text-center my-3 my-md-0">
+                <img
+                    src={BDLogo}
+                    alt="BD Logo"
+                    style={{ height: '80px', maxWidth: '100%', objectFit: 'contain' }}
+                />
+            </Col> */}
+
+            {/* h5 right */}
+            {/* <Col xs="12" md="4" className="text-start text-md-end">
+                <h5 className='sans-font-reg mb-0'>Arranger | Teacher | Singer</h5>
+            </Col>
+        </Row>
+    </Container>
+</div> */}

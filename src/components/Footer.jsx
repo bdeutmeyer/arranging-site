@@ -8,20 +8,7 @@ import ytLogo from '../assets/logos/ytLogo.jpeg';
 
 function Footer() {
     return (
-        <Container fluid id="footer" className="shadow py-3 bg-light">
-            
-            {/* Top Row: Let's [BD Logo] Connect */}
-            <Row className="justify-content-center align-items-center mb-2 text-center">
-                <Col xs="auto"><h5 className="m-0">Let’s</h5></Col>
-                <Col xs="auto">
-                    <a href="/">
-                        <img src={BDLogo} alt="BD logo" style={{ height: '30px' }} />
-                    </a>
-                </Col>
-                <Col xs="auto"><h5 className="m-0">Connect</h5></Col>
-            </Row>
-
-            {/* Bottom Row: Social Icons */}
+        <Container fluid id="footer" className="shadow py-3 bg-light sans-font-reg">
             <Row className="justify-content-between px-5">
                 <Col xs="auto">
                     <a href="">
@@ -46,6 +33,13 @@ function Footer() {
                 <Col xs="auto">
                     <a href="">
                         <img src={jwpLogo} alt="JWPepper profile" style={{ height: '30px' }} />
+                    </a>
+                </Col>
+            </Row>
+            <Row className="justify-content-center align-items-center mb-2 text-center">
+                <Col xs="auto">
+                    <a href="/">
+                        <img src={BDLogo} alt="BD logo" style={{ height: '30px' }} />
                     </a>
                 </Col>
             </Row>
