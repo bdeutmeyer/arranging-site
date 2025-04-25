@@ -10,9 +10,10 @@ export default function About() {
             </div>
             <hr />
             <br />
-            <div>
+            <div className='logo-bg'>
                 {/* <img src={headshot} alt="Beth Deutmeyer headshot" className="float-start me-3 rounded shadow" width="15%"/> */}
-                <p className="text-start sans-font-reg">Beth Deutmeyer is...</p>
+                <p className="text-start sans-font-reg px-4 px-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut velit nulla maxime! Praesentium odio unde corporis id facere reiciendis rerum sequi deleniti veniam? Esse adipisci animi officia? Eius, a facilis?</p>
+                <p className="text-start sans-font-reg px-4 px-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut velit nulla maxime! Praesentium odio unde corporis id facere reiciendis rerum sequi deleniti veniam? Esse adipisci animi officia? Eius, a facilis?</p>
             </div>
         </>
 

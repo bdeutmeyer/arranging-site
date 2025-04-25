@@ -16,6 +16,8 @@ export default function SongDetail() {
                     <Col xs="12" md="6" className="my-3 sans-font-reg">
                         <h2 className="serif-font">{song.songTitle}</h2>
                         <h4>{song.composerFirst} {song.composerLast}</h4>
+                        <hr />
+                        <br />
                         <h5>{song.songParts}{song.accompDescr}</h5>
 
                         <h5>Range:</h5>
