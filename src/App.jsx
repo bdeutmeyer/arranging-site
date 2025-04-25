@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 //Parent section
 function App() {
   return (
-    <div id="content">
+    <div id="content" className="app-wrapper d-flex flex-column min-vh-100">
       <div id="nf-wrap">
         <div id="non-footer">
           <Navigation />

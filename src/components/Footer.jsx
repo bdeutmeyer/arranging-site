@@ -1,33 +1,60 @@
-import { useState } from 'react'
-// import 'animate.css'
-// import ghLogo from '../assets/logos/github-mark.svg'
-// import liLogo from '../assets/logos/linkedin-icon.png'
+import { Container, Row, Col } from 'reactstrap';
+import liLogo from '../assets/logos/liLogo.png';
+import fbLogo from '../assets/logos/fbLogo.png';
+import jwpLogo from '../assets/logos/jwpLogo.png';
+import BDLogo from '../assets/logos/BDLogo.svg';
+import bskyLogo from '../assets/logos/bskyLogo.svg';
+import ytLogo from '../assets/logos/ytLogo.jpeg';
 
-// Footer will contain social media links (LinkedIn, BlueSky, Facebook), and IF I have a profile anywhere else like JW Pepper or Hal Leonard, it will have those too. ALSO YOUTUBE. "Let's connect"
-
-
-//Footer section
 function Footer() {
-    // const [ghLogoHover, setGhLogoHover] = useState(false);
-    // const [liLogoHover, setLiLogoHover] = useState(false);
     return (
-        <>
-            {/* <div id="footer" className='container-fluid footer-section shadow p-2'>
-                <div className='row d-flex justify-content-center'>
-                    <div className='col col-2' onMouseEnter={() => setGhLogoHover(true)} onMouseLeave={() => setGhLogoHover(false)}>
-                        <a href="https://github.com/bdeutmeyer">
-                            <img src={ghLogo} alt="Link to GitHub profile" width="30%" className={`${ghLogoHover ? 'animate__animated animate__pulse' : ''}`} />
-                        </a>
-                    </div>
-                    <div className='col col-2' onMouseEnter={() => setLiLogoHover(true)} onMouseLeave={() => setLiLogoHover(false)}>
-                        <a href="https://www.linkedin.com/in/beth-deutmeyer-4b0b73238">
-                            <img src={liLogo} alt="Link to LinkedIn profile" width="30%" className={`${liLogoHover ? 'animate__animated animate__pulse' : ''}`} />
-                        </a>
-                    </div>
-                </div>
-            </div> */}
-        </>
-    )
+        <Container fluid id="footer" className="shadow py-3 bg-light">
+            
+            {/* Top Row: Let's [BD Logo] Connect */}
+            <Row className="justify-content-center align-items-center mb-2 text-center">
+                <Col xs="auto"><h5 className="m-0">Let’s</h5></Col>
+                <Col xs="auto">
+                    <a href="/">
+                        <img src={BDLogo} alt="BD logo" style={{ height: '30px' }} />
+                    </a>
+                </Col>
+                <Col xs="auto"><h5 className="m-0">Connect</h5></Col>
+            </Row>
+
+            {/* Bottom Row: Social Icons */}
+            <Row className="justify-content-between px-5">
+                <Col xs="auto">
+                    <a href="">
+                        <img src={bskyLogo} alt="BlueSky profile" style={{ height: '30px' }} />
+                    </a>
+                </Col>
+                <Col xs="auto">
+                    <a href="">
+                        <img src={liLogo} alt="LinkedIn profile" style={{ height: '30px' }} />
+                    </a>
+                </Col>
+                <Col xs="auto">
+                    <a href="">
+                        <img src={fbLogo} alt="Facebook profile" style={{ height: '30px' }} />
+                    </a>
+                </Col>
+                <Col xs="auto">
+                    <a href="">
+                        <img src={ytLogo} alt="YouTube channel" style={{ height: '30px' }} />
+                    </a>
+                </Col>
+                <Col xs="auto">
+                    <a href="">
+                        <img src={jwpLogo} alt="JWPepper profile" style={{ height: '30px' }} />
+                    </a>
+                </Col>
+            </Row>
+        </Container>
+    );
 }
 
 export default Footer;
+
+
+// https://bsky.app/profile/bethdeut.bsky.social
+// https://www.linkedin.com/in/beth-deutmeyer-4b0b73238
