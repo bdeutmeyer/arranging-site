@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 import songData from '../../data/songData';
 
+
 export default function SongDetail() {
     const { ext } = useParams();
     const song = songData.find((index) => index.pathExt == ext);
@@ -36,7 +37,7 @@ export default function SongDetail() {
                                         `${voice.charAt(0).toUpperCase() + voice.slice(1)} ${number}`
                                     )}: {notes.split(/([♭♯♮𝄪𝄫])/).map((char, i) =>
                                         ['♭', '♯', '♮', '𝄪', '𝄫'].includes(char) ? (
-                                            <span key={i} style={{ fontFamily: 'Courier New' }}>{char}</span>
+                                            <span key={i} className='font-monospace'>{char}</span>
                                         ) : (
                                             <React.Fragment key={i}>{char}</React.Fragment>
                                         )
@@ -45,7 +46,7 @@ export default function SongDetail() {
                                 </li>
                             ))}
                         </ul>
-                        <h5>Available for purchase via <a href={song.purchaseLink}>{song.purchaseSite}</a></h5>
+                        <h5>Available for purchase via <a href={song.purchaseLink} className='text-black'>{song.purchaseSite}</a></h5>
                         <h5>Price: {song.price}</h5>
                     </Col>
 

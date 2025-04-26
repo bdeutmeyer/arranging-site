@@ -1,12 +1,12 @@
 import { useMediaQuery } from 'react-responsive';
-import { Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 import BDLogo from '../assets/logos/BDLogo.svg';
 
 export default function WelcomeHeader() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
-    <div className='text-center pt-5 page-header'>
+    <Container fluid className='text-center pt-5 page-header'>
       {isMobile ? (
         // Mobile layout
         <Row className='align-items-center'>
@@ -32,6 +32,6 @@ export default function WelcomeHeader() {
           </Col>
         </Row>
       )}
-    </div>
+    </Container>
   );
 };

@@ -10,9 +10,10 @@ export default function Footer() {
     const isMobile = useMediaQuery({ maxWidth: 767 });
 
     return (
-        <Container fluid id="footer" className="shadow py-3 bg-light sans-font-reg">
+        <Container fluid id="footer" className="py-3">
             {isMobile ? (
                 <>
+                    <hr />
                     <Row className="justify-content-center px-5">
                         <Col xs="auto">
                             <a href="">
@@ -46,33 +47,37 @@ export default function Footer() {
                 </>
 
             ) : (
-                <Row className="justify-content-between px-5">
-                    <Col xs="auto">
-                        <a href="">
-                            <img src={bskyLogo} alt="BlueSky profile" style={{ height: '30px' }} />
-                        </a>
-                    </Col>
-                    <Col xs="auto">
-                        <a href="">
-                            <img src={liLogo} alt="LinkedIn profile" style={{ height: '30px' }} />
-                        </a>
-                    </Col>
-                    <Col xs="auto">
-                        <a href="">
-                            <img src={jwpLogo} alt="JWPepper profile" style={{ height: '30px' }} />
-                        </a>
-                    </Col>
-                    <Col xs="auto">
-                        <a href="">
-                            <img src={fbLogo} alt="Facebook profile" style={{ height: '30px' }} />
-                        </a>
-                    </Col>
-                    <Col xs="auto">
-                        <a href="">
-                            <img src={ytLogo} alt="YouTube channel" style={{ height: '30px' }} />
-                        </a>
-                    </Col>
-                </Row>
+                <>
+                    <hr />
+                    <Row className="justify-content-between px-5">
+                        <Col xs="auto">
+                            <a href="">
+                                <img src={bskyLogo} alt="BlueSky profile" style={{ height: '30px' }} />
+                            </a>
+                        </Col>
+                        <Col xs="auto">
+                            <a href="">
+                                <img src={liLogo} alt="LinkedIn profile" style={{ height: '30px' }} />
+                            </a>
+                        </Col>
+                        <Col xs="auto">
+                            <a href="">
+                                <img src={jwpLogo} alt="JWPepper profile" style={{ height: '30px' }} />
+                            </a>
+                        </Col>
+                        <Col xs="auto">
+                            <a href="">
+                                <img src={fbLogo} alt="Facebook profile" style={{ height: '30px' }} />
+                            </a>
+                        </Col>
+                        <Col xs="auto">
+                            <a href="">
+                                <img src={ytLogo} alt="YouTube channel" style={{ height: '30px' }} />
+                            </a>
+                        </Col>
+                    </Row>
+                </>
+
             )}
 
         </Container>
