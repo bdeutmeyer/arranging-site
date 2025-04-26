@@ -14,6 +14,7 @@ export default function About() {
                 {/* <img src={headshot} alt="Beth Deutmeyer headshot" className="float-start me-3 rounded shadow" width="15%"/> */}
                 <p className="text-start sans-font-reg px-4 px-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut velit nulla maxime! Praesentium odio unde corporis id facere reiciendis rerum sequi deleniti veniam? Esse adipisci animi officia? Eius, a facilis?</p>
                 <p className="text-start sans-font-reg px-4 px-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut velit nulla maxime! Praesentium odio unde corporis id facere reiciendis rerum sequi deleniti veniam? Esse adipisci animi officia? Eius, a facilis?</p>
+                <p className="text-start sans-font-reg px-4 px-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatem maxime eaque inventore nulla ratione explicabo nemo aliquam hic sint at rem, impedit et consequatur enim corporis aspernatur est. Ad!</p>
             </div>
         </>
 

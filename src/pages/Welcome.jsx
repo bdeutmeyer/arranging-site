@@ -2,6 +2,7 @@ import { Container, Row, Col, Card, CardBody, CardText, CardImg, CardImgOverlay,
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import songData from "../data/songData";
+import WelcomeHeader from '../components/WelcomeHeader';
 
 export default function Welcome() {
     const newestSong = [...songData]
@@ -21,15 +22,9 @@ export default function Welcome() {
 
     return (
         <>
-            {/* Hero section */}
-            <div className='text-center pt-5 page-header'>
-                <h1 className='serif-font'>FirstName LastName</h1>
-                <h5 className='sans-font-reg px-4'>Arranger | Teacher | Singer</h5>
-            </div>
-
+            <WelcomeHeader />
             <hr />
             <br />
-
             {/* Main page content */}
             <Container fluid="md" className='logo-bg px-3 px-md-6'>
                 <Row className="mb-5">
