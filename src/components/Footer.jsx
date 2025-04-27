@@ -17,7 +17,7 @@ export default function Footer() {
                     <Row className="justify-content-center px-5">
                         <Col xs="auto">
                             <a href="">
-                                <img src={jwpLogo} alt="JWPepper profile" style={{ height: '30px' }} />
+                                <img src={jwpLogo} alt="JWPepper profile" className="footer-icon" />
                             </a>
                         </Col>
                     </Row>
@@ -25,22 +25,22 @@ export default function Footer() {
                     <Row className="justify-content-between px-5">
                         <Col xs="auto">
                             <a href="">
-                                <img src={bskyLogo} alt="BlueSky profile" style={{ height: '30px' }} />
+                                <img src={bskyLogo} alt="BlueSky profile" className="footer-icon" />
                             </a>
                         </Col>
                         <Col xs="auto">
                             <a href="">
-                                <img src={liLogo} alt="LinkedIn profile" style={{ height: '30px' }} />
+                                <img src={liLogo} alt="LinkedIn profile" className="footer-icon" />
                             </a>
                         </Col>
                         <Col xs="auto">
                             <a href="">
-                                <img src={fbLogo} alt="Facebook profile" style={{ height: '30px' }} />
+                                <img src={fbLogo} alt="Facebook profile" className="footer-icon" />
                             </a>
                         </Col>
                         <Col xs="auto">
                             <a href="">
-                                <img src={ytLogo} alt="YouTube channel" style={{ height: '30px' }} />
+                                <img src={ytLogo} alt="YouTube channel" className="footer-icon" />
                             </a>
                         </Col>
                     </Row>
@@ -52,27 +52,27 @@ export default function Footer() {
                     <Row className="justify-content-between px-5">
                         <Col xs="auto">
                             <a href="">
-                                <img src={bskyLogo} alt="BlueSky profile" style={{ height: '30px' }} />
+                                <img src={bskyLogo} alt="BlueSky profile" className="footer-icon" />
                             </a>
                         </Col>
                         <Col xs="auto">
                             <a href="">
-                                <img src={liLogo} alt="LinkedIn profile" style={{ height: '30px' }} />
+                                <img src={liLogo} alt="LinkedIn profile" className="footer-icon" />
                             </a>
                         </Col>
                         <Col xs="auto">
                             <a href="">
-                                <img src={jwpLogo} alt="JWPepper profile" style={{ height: '30px' }} />
+                                <img src={jwpLogo} alt="JWPepper profile" className="footer-icon" />
                             </a>
                         </Col>
                         <Col xs="auto">
                             <a href="">
-                                <img src={fbLogo} alt="Facebook profile" style={{ height: '30px' }} />
+                                <img src={fbLogo} alt="Facebook profile" className="footer-icon" />
                             </a>
                         </Col>
                         <Col xs="auto">
                             <a href="">
-                                <img src={ytLogo} alt="YouTube channel" style={{ height: '30px' }} />
+                                <img src={ytLogo} alt="YouTube channel" className="footer-icon" />
                             </a>
                         </Col>
                     </Row>
