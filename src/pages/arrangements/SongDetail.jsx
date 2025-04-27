@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, Button } from 'reactstrap';
 import songData from '../../data/songData';
 
 
@@ -46,8 +46,13 @@ export default function SongDetail() {
                                 </li>
                             ))}
                         </ul>
-                        <h5>Available for purchase via <a href={song.purchaseLink} className='text-black'>{song.purchaseSite}</a></h5>
-                        <h5>Price: {song.price}</h5>
+
+                        <h5>Price per copy: {song.price}</h5>
+                        <Button 
+                            color="dark"
+                            tag="a"
+                            href={song.purchaseLink}
+                        >Purchase on {song.purchaseSite}</Button>
                     </Col>
 
                     {/* Image Section */}
