@@ -7,12 +7,8 @@ import Footer from './components/Footer'
 function App() {
   return (
     <div id="content" className="app-wrapper d-flex flex-column min-vh-100">
-      <div id="nf-wrap">
-        <div id="non-footer">
-          <Navigation />
-          <Outlet />
-        </div>
-      </div>
+      <Navigation />
+      <Outlet />
       <Footer />
     </div>
   );

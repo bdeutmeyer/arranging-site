@@ -1,6 +1,5 @@
 import { Container, Row, Col, Card, CardBody, CardText, CardImg, CardImgOverlay, CardTitle, CardSubtitle, Form, FormGroup, Label, Input, Button, } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import songData from "../data/songData";
 import WelcomeHeader from '../components/WelcomeHeader';
 import Contact from './Contact';
@@ -11,15 +10,6 @@ export default function Welcome() {
         .sort((a, b) => new Date(b.releaseDate) - new Date(a.releaseDate))[0];
 
     const upcomingSong = songData.find(song => song.upcoming);
-
-    // State to track form submission
-    const [submitted, setSubmitted] = useState(false);
-
-    // Handle form submission (for now, just toggle the submitted state)
-    const handleSubmit = (e) => {
-        e.preventDefault(); // Prevent default form submission behavior
-        setSubmitted(true);  // Set submitted to true, to show the thank you message
-    };
 
     return (
         <>
@@ -95,7 +85,7 @@ export default function Welcome() {
 
                 {/* Contact Section */}
                 <hr />
-                <Contact />
+                <Contact withBackground={false} />
             </Container>
         </>
     );
