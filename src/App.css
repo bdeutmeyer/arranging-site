@@ -23,6 +23,10 @@
   }
 }
 
+.hidden {
+  display: none;
+}
+
 .logo-bg {
   background-image: url('/src/assets/logos/BDLogo.svg');
   background-repeat: no-repeat;
