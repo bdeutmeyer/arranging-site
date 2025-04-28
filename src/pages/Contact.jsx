@@ -5,7 +5,7 @@ export default function Contact({ withBackground = true }) {
     const FormContent = (
         <>
             <p className='text-center mt-0 pt-0 text-secondary'><small><cite>All fields required</cite></small></p>
-            <form name="contact" method="POST" data-netlify="true" className='pb-4 px-3 px-md-6'>
+            <Form name="contact" method="POST" className='pb-4 px-3 px-md-6'>
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                     <label>
@@ -51,10 +51,10 @@ export default function Contact({ withBackground = true }) {
                 <Row>
                     <Col md="12" className="mb-md-3 mb-1">
                         <FormGroup>
-                            <Label for="textBox" className='text-black'>Message</Label>
+                            <Label for="messageBox" className='text-black'>Message</Label>
                             <Input
-                                id="textBox"
-                                name="text"
+                                id="messageBox"
+                                name="message"
                                 placeholder="ex. You are my favorite arranger EVER! I can't wait to buy your entire catalog!"
                                 type="textarea"
                                 style={{ minHeight: "150px" }}
@@ -72,7 +72,7 @@ export default function Contact({ withBackground = true }) {
                         </Button>
                     </Col>
                 </Row>
-            </form>
+            </Form>
         </>
     );
 
