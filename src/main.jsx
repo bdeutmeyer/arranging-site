@@ -39,7 +39,7 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: 'thankyou',
+        path: 'thank-you',
         element: <ThankYou />,
       }
     ],
