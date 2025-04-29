@@ -5,7 +5,7 @@ export default function Contact({ withBackground = true }) {
     const FormContent = (
         <>
             <p className='text-center mt-0 pt-0 text-secondary'><small><cite>All fields required</cite></small></p>
-            <Form name="contact" method="POST" className='pb-4 px-3 px-md-6'>
+            <Form name="contact" method="POST" action="/src/pages/ThankYou.jsx" className='pb-4 px-3 px-md-6'>
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                     <label>
