@@ -14,19 +14,19 @@ export default function About() {
             </div>
             <hr />
             <br />
-            <Container className="my-2 logo-bg sans-font-reg">
+            <Container className="logo-bg sans-font-reg">
                 <Row className="align-items-start">
 
                     {/* Text Column */}
-                    <Col md="8">
+                    <Col md="9" className='px-5'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at quam vel sapien placerat posuere.</p>
                         <p>Fusce sed lorem nec nulla viverra varius. Suspendisse potenti. Morbi tincidunt dolor nec quam congue, vel hendrerit velit pretium.</p>
                         <p>Donec eget lorem ac metus fringilla posuere. Aliquam erat volutpat. Cras sed nunc leo.</p>
                     </Col>
 
                     {/* Photo Strip Column */}
-                    <Col md="4" className="d-flex justify-content-center">
-                        <div className="photo-strip">
+                    <Col md="3" className="d-flex justify-content-center">
+                        <div className="photo-strip shadow">
                             {photoArray.map((photo, index) => (
                                 <img
                                     key={index}
