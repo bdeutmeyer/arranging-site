@@ -11,12 +11,7 @@ export default function SongDetail() {
     return (
         <>
             <Container className="logo-bg">
-                <Row className="gx-4 px-3 mt-4"> {/* Horizontal & top spacing */}
-
-
-
-                    {/* Need to put in price/purchase info. also need footer with socials. also have conditional for upcoming on this page and on arrangements page (and welcome? redundant there */}
-
+                <Row className="gx-4 px-3 mt-4"> 
 
                     {/* Song Info Section */}
                     <Col xs="12" md="6" className="my-3 sans-font-reg">
@@ -28,7 +23,7 @@ export default function SongDetail() {
                         <hr />
                         <br />
                         <h5>{song.songParts}{song.accompDescr}</h5>
-
+                        <br />
                         <h5>Range:</h5>
                         <ul className="list-unstyled" style={{ fontFamily: 'Arial' }}>
                             {Object.entries(song.range).map(([part, notes]) => (
@@ -42,17 +37,23 @@ export default function SongDetail() {
                                             <React.Fragment key={i}>{char}</React.Fragment>
                                         )
                                     )}
-
                                 </li>
                             ))}
                         </ul>
-
-                        <h5>Price per copy: {song.price}</h5>
-                        <Button 
-                            color="dark"
-                            tag="a"
-                            href={song.purchaseLink}
-                        >Purchase on {song.purchaseSite}</Button>
+                        <br />
+                        {song.upcoming ? (<h5>Coming soon!</h5>) : (
+                            <>
+                                <h5><a href={song.listenLink} className='text-black'>Listen on YouTube</a></h5>
+                                <br />
+                                <h5>Price per copy: {song.price}</h5>
+                                <Button
+                                    color="dark"
+                                    tag="a"
+                                    href={song.purchaseLink}
+                                    className='mt-3'
+                                >Purchase on {song.purchaseSite}</Button>
+                            </>
+                        )};
                     </Col>
 
                     {/* Image Section */}
@@ -64,7 +65,6 @@ export default function SongDetail() {
                             style={{ maxWidth: "100%", height: "auto", maxHeight: "75vh" }}
                         />
                     </Col>
-
                 </Row>
             </Container>
         </>
