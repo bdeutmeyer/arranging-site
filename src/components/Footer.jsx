@@ -71,7 +71,7 @@ export default function Footer() {
                             </a>
                         </Col>
                         <Col xs="auto">
-                            <a href="">
+                            <a href="https://www.youtube.com/@BethDeutmeyer">
                                 <img src={ytLogo} alt="YouTube channel" className="footer-icon" />
                             </a>
                         </Col>
