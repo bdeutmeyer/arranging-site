@@ -51,12 +51,12 @@ export default function Footer() {
                     <hr />
                     <Row className="justify-content-between px-5">
                         <Col xs="auto">
-                            <a href="">
+                            <a href="https://bsky.app/profile/bethdeut.bsky.social">
                                 <img src={bskyLogo} alt="BlueSky profile" className="footer-icon" />
                             </a>
                         </Col>
                         <Col xs="auto">
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/beth-deutmeyer-4b0b73238">
                                 <img src={liLogo} alt="LinkedIn profile" className="footer-icon" />
                             </a>
                         </Col>
@@ -83,6 +83,3 @@ export default function Footer() {
         </Container>
     );
 };
-
-// https://bsky.app/profile/bethdeut.bsky.social
-// https://www.linkedin.com/in/beth-deutmeyer-4b0b73238

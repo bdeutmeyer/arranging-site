@@ -53,6 +53,24 @@
   min-height: 100vh;
 }
 
+.photo-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* space between images */
+  padding: 10px;
+  background-color: white;
+  border: 2px solid black;
+  width: fit-content;
+}
+
+.photo-strip-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+
 #footer {
   margin-top: auto;
 }

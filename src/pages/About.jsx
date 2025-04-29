@@ -1,8 +1,12 @@
-import { Link } from 'react-router-dom'
-// import headshot from '../assets/images/Beth.jpg'
-
 //About Me page
+import { Container, Row, Col } from 'reactstrap';
+import photo1 from '../assets/images/photo1.png'
+import photo2 from '../assets/images/photo2.png'
+import photo3 from '../assets/images/photo3.png'
+import photo4 from '../assets/images/photo4.png'
+
 export default function About() {
+    const photoArray = [photo1, photo2, photo3, photo4];
     return (
         <>
             <div className='page-header'>
@@ -10,13 +14,32 @@ export default function About() {
             </div>
             <hr />
             <br />
-            <div className='logo-bg'>
-                {/* <img src={headshot} alt="Beth Deutmeyer headshot" className="float-start me-3 rounded shadow" width="15%"/> */}
-                <p className="text-start sans-font-reg px-4 px-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut velit nulla maxime! Praesentium odio unde corporis id facere reiciendis rerum sequi deleniti veniam? Esse adipisci animi officia? Eius, a facilis?</p>
-                <p className="text-start sans-font-reg px-4 px-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut velit nulla maxime! Praesentium odio unde corporis id facere reiciendis rerum sequi deleniti veniam? Esse adipisci animi officia? Eius, a facilis?</p>
-                <p className="text-start sans-font-reg px-4 px-md-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatem maxime eaque inventore nulla ratione explicabo nemo aliquam hic sint at rem, impedit et consequatur enim corporis aspernatur est. Ad!</p>
-            </div>
-        </>
+            <Container className="my-2 logo-bg sans-font-reg">
+                <Row className="align-items-start">
 
+                    {/* Text Column */}
+                    <Col md="8">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque at quam vel sapien placerat posuere.</p>
+                        <p>Fusce sed lorem nec nulla viverra varius. Suspendisse potenti. Morbi tincidunt dolor nec quam congue, vel hendrerit velit pretium.</p>
+                        <p>Donec eget lorem ac metus fringilla posuere. Aliquam erat volutpat. Cras sed nunc leo.</p>
+                    </Col>
+
+                    {/* Photo Strip Column */}
+                    <Col md="4" className="d-flex justify-content-center">
+                        <div className="photo-strip">
+                            {photoArray.map((photo, index) => (
+                                <img
+                                    key={index}
+                                    src={photo}
+                                    alt={`Photo ${index + 1}`}
+                                    className="photo-strip-img"
+                                />
+                            ))}
+                        </div>
+
+                    </Col>
+                </Row>
+            </Container>
+        </>
     );
 };
