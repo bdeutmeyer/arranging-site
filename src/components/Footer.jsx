@@ -60,11 +60,11 @@ export default function Footer() {
                                 <img src={liLogo} alt="LinkedIn profile" className="footer-icon" />
                             </a>
                         </Col>
-                        <Col xs="auto">
+                        {/* <Col xs="auto">
                             <a href="">
                                 <img src={jwpLogo} alt="JWPepper profile" className="footer-icon" />
                             </a>
-                        </Col>
+                        </Col> */}
                         <Col xs="auto">
                             <a href="">
                                 <img src={fbLogo} alt="Facebook profile" className="footer-icon" />
