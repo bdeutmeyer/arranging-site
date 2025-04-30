@@ -53,7 +53,7 @@ export default function SongDetail() {
                                     className='mt-3'
                                 >Purchase on {song.purchaseSite}</Button>
                             </>
-                        )};
+                        )}
                     </Col>
 
                     {/* Image Section */}
