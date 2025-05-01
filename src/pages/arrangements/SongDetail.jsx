@@ -44,14 +44,15 @@ export default function SongDetail() {
                         {song.upcoming ? (<h5>Coming soon!</h5>) : (
                             <>
                                 <h5><a href={song.listenLink} className='text-black'>Listen on YouTube</a></h5>
-                                <br />
+                                <h5>Available for purchase soon!</h5>
+                                {/* <br />
                                 <h5>Price per copy: {song.price}</h5>
                                 <Button
                                     color="dark"
                                     tag="a"
                                     href={song.purchaseLink}
                                     className='mt-3'
-                                >Purchase on {song.purchaseSite}</Button>
+                                >Purchase on {song.purchaseSite}</Button> */}
                             </>
                         )}
                     </Col>
