@@ -79,7 +79,7 @@ export default function Contact({ withBackground = true }) {
     return (
         <>
             <div className='text-center pt-5 serif-font page-header'>
-                <h1>Contact Me</h1>
+                <h1>Contact</h1>
                 <h5 className='sans-font-reg px-4'>Comments? Questions? Requests? Submit them below.</h5>
             </div>
             <hr className="mb-0 pb-0" />
