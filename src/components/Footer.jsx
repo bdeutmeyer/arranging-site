@@ -1,8 +1,6 @@
-import { useMediaQuery } from 'react-responsive';
 import { Container, Row, Col } from 'reactstrap';
 import liLogo from '../assets/logos/liLogo.png';
 import fbLogo from '../assets/logos/fbLogo.png';
-import jwpLogo from '../assets/logos/jwpLogo.png';
 import bskyLogo from '../assets/logos/bskyLogo.svg';
 import ytLogo from '../assets/logos/ytLogo.jpeg';
 
