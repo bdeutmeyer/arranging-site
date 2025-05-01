@@ -18,20 +18,21 @@ export default function Footer() {
                             </a>
                         </Col>
                         <Col xs="auto">
-                            <a href="https://www.linkedin.com/in/beth-deutmeyer-4b0b73238">
-                                <img src={liLogo} alt="LinkedIn profile" className="footer-icon" />
-                            </a>
-                        </Col>
-                        <Col xs="auto">
-                            <a href="">
-                                <img src={fbLogo} alt="Facebook profile" className="footer-icon" />
-                            </a>
-                        </Col>
-                        <Col xs="auto">
                             <a href="https://www.youtube.com/@BethDeutmeyer">
                                 <img src={ytLogo} alt="YouTube channel" className="footer-icon" />
                             </a>
                         </Col>
+                        <Col xs="auto">
+                            <a href="https://www.linkedin.com/in/beth-deutmeyer-4b0b73238">
+                                <img src={liLogo} alt="LinkedIn profile" className="footer-icon" />
+                            </a>
+                        </Col>
+                        {/* <Col xs="auto">
+                            <a href="">
+                                <img src={fbLogo} alt="Facebook profile" className="footer-icon" />
+                            </a>
+                        </Col> */}
+
                     </Row>
         </Container>
     );
