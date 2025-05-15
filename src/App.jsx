@@ -9,7 +9,7 @@ function App() {
     <div id="content" className="app-wrapper d-flex flex-column min-vh-100">
       <Navigation />
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

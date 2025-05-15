@@ -11,7 +11,7 @@ export default function SongDetail() {
     return (
         <>
             <Container className="logo-bg">
-                <Row className="gx-4 px-3 mt-4"> 
+                <Row className="gx-4 px-3 mt-4">
 
                     {/* Song Info Section */}
                     <Col xs="12" md="6" className="my-3 sans-font-reg">
@@ -24,35 +24,38 @@ export default function SongDetail() {
                         <br />
                         <h5>{song.songParts}{song.accompDescr}</h5>
                         <br />
-                        <h5>Range:</h5>
-                        <ul className="list-unstyled" style={{ fontFamily: 'Arial' }}>
-                            {Object.entries(song.range).map(([part, notes]) => (
-                                <li key={part} className='ps-4 ranges'>
-                                    {part.replace(/(\w+)(\d)/, (_, voice, number) =>
-                                        `${voice.charAt(0).toUpperCase() + voice.slice(1)} ${number}`
-                                    )}: {notes.split(/([♭♯♮𝄪𝄫])/).map((char, i) =>
-                                        ['♭', '♯', '♮', '𝄪', '𝄫'].includes(char) ? (
-                                            <span key={i} className='font-monospace'>{char}</span>
-                                        ) : (
-                                            <React.Fragment key={i}>{char}</React.Fragment>
-                                        )
-                                    )}
-                                </li>
-                            ))}
-                        </ul>
+                        {song.upcoming ? (<></>) : (<>
+                            <h5>Range:</h5>
+                            <ul className="list-unstyled" style={{ fontFamily: 'Arial' }}>
+                                {Object.entries(song.range).map(([part, notes]) => (
+                                    <li key={part} className='ps-4 ranges'>
+                                        {part.replace(/(\w+)(\d)/, (_, voice, number) =>
+                                            `${voice.charAt(0).toUpperCase() + voice.slice(1)} ${number}`
+                                        )}: {notes.split(/([♭♯♮𝄪𝄫])/).map((char, i) =>
+                                            ['♭', '♯', '♮', '𝄪', '𝄫'].includes(char) ? (
+                                                <span key={i} className='font-monospace'>{char}</span>
+                                            ) : (
+                                                <React.Fragment key={i}>{char}</React.Fragment>
+                                            )
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </>)}
+
                         <br />
                         {song.upcoming ? (<h5>Coming soon!</h5>) : (
                             <>
                                 <h5><a href={song.listenLink} className='text-black'>Listen on YouTube</a></h5>
-                                <h5>Available for purchase soon!</h5>
-                                {/* <br />
+                                <h5>Available for purchase on J.W. Pepper</h5>
+                                <br />
                                 <h5>Price per copy: {song.price}</h5>
                                 <Button
                                     color="dark"
                                     tag="a"
                                     href={song.purchaseLink}
                                     className='mt-3'
-                                >Purchase on {song.purchaseSite}</Button> */}
+                                >Purchase on {song.purchaseSite}</Button>
                             </>
                         )}
                     </Col>
