@@ -2,8 +2,9 @@ import danzaImg from "../assets/images/danza.png"
 import sicutImg from "../assets/images/sicut.png"
 import sitivitImg from "../assets/images/sitivit.png"
 import sicutSitivitImg from "../assets/images/sicutSitivit.png"
-import seTuMamiImg from "../assets/images/seTuMami.png"
+import silverSwanImg from "../assets/images/silverSwan.png"
 import sehnsuchtImg from "../assets/images/sehnsucht.png"
+// import seTuMamiImg from "../assets/images/seTuMami.png"
 // To add songs: -check "upcoming" boolean of the last song, print to pdf then use preview to export p. 1 as png, releaseDate format YYYY-MM-DD, category = treble/bass/mixed, accidentals: ♭♯♮𝄪𝄫
 
 const songData = [
@@ -108,6 +109,56 @@ const songData = [
         }, 
         upcoming: false
     },
+    {
+        id: 5,
+        pathExt: 'the-silver-swan-ssa',
+        imagePath: silverSwanImg,
+        imageAlt: 'The Silver Swan',
+        purchaseLink: '',
+        purchaseSite: 'J.W. Pepper',
+        price: '$2.50',  
+        listenLink: 'https://youtu.be/8V7DYEfTcRI',
+        composerLast: 'Gibbons',
+        composerFirst: 'Orlando',
+        songTitle: 'The Silver Swan',
+        songParts: 'SSA',
+        category: 'treble',
+        accompaniment: 'aCappella',
+        accompDescr: ' a cappella',
+        releaseDate: '',
+        range: {
+            soprano1: 'F4 - G5',
+            soprano2: 'C4 - C5',
+            alto: 'A3 - G4'
+        }, 
+        upcoming: true
+    },
+    // {
+    //     id: 6,
+    //     pathExt: 'sehnsucht-ssaa',
+    //     imagePath: sehnsuchtImg,
+    //     imageAlt: 'Sehnsucht',
+    //     purchaseLink: 'https://www.youtube.com',
+    //     purchaseSite: 'J.W. Pepper',
+    //     price: '',  
+    //     listenLink: '',
+    //     composerLast: 'Brahms',
+    //     composerFirst: 'Johannes',
+    //     songTitle: 'Sehnsucht',
+    //     songSubtitle: 'Op. 112, No. 1',
+    //     songParts: 'SSAA',
+    //     category: 'treble',
+    //     accompaniment: 'pianoOnly',
+    //     accompDescr: ' and piano',
+    //     releaseDate: '',
+    //     range: {
+    //         soprano1: 'E4 - F♯5',
+    //         soprano2: 'A3 - F♯5',
+    //         alto1: 'G♯3 - C♯5',
+    //         alto2: 'F♯3 - B4'
+    //     }, 
+    //     upcoming: true
+    // },
     // {
     //     id: 5,
     //     pathExt: 'se-tu-m\'ami',
@@ -132,32 +183,6 @@ const songData = [
     //     }, 
     //     upcoming: true
     // },
-    {
-        id: 5,
-        pathExt: 'sehnsucht',
-        imagePath: sehnsuchtImg,
-        imageAlt: 'Sehnsucht',
-        purchaseLink: 'https://www.youtube.com',
-        purchaseSite: 'J.W. Pepper',
-        price: '',  
-        listenLink: '',
-        composerLast: 'Brahms',
-        composerFirst: 'Johannes',
-        songTitle: 'Sehnsucht',
-        songSubtitle: 'Op. 112, No. 1',
-        songParts: 'SSAA',
-        category: 'treble',
-        accompaniment: 'pianoOnly',
-        accompDescr: ' and piano',
-        releaseDate: '',
-        range: {
-            soprano1: 'E4 - F♯5',
-            soprano2: 'A3 - F♯5',
-            alto1: 'G♯3 - C♯5',
-            alto2: 'F♯3 - B4'
-        }, 
-        upcoming: true
-    },
 ];
 
 export default songData;
