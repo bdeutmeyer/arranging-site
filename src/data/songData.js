@@ -8,34 +8,8 @@ import sehnsuchtImg from "../assets/images/sehnsucht.png"
 // To add songs: -check "upcoming" boolean of the last song, print to pdf then use preview to export p. 1 as png, releaseDate format YYYY-MM-DD, category = treble/bass/mixed, accidentals: ♭♯♮𝄪𝄫
 
 const songData = [
-    // {
-    //     id: 1,
-    //     pathExt: 'danza-ttbb',
-    //     imagePath: danzaImg,
-    //     imageAlt: 'Danza, danza',
-    //     purchaseLink: 'https://www.jwpepper.com/danza-danza-11625730-2547492/p',
-    //     purchaseSite: 'J.W. Pepper',
-    //     price: '$2.50',  
-    //     listenLink: 'https://youtu.be/7R6h6a1PyrU',
-    //     composerLast: 'Durante',
-    //     composerFirst: 'Francesco',
-    //     songTitle: 'Danza, danza',
-    //     songParts: 'TTBB',
-    //     category: 'bass',
-    //     accompaniment: 'pianoOnly',
-    //     accompDescr: ' and piano',
-    //     releaseDate: '2025-02-12',
-    //     range: {
-    //         tenor1: 'F3 - G♭4',
-    //         tenor2: 'D♭3 - F4',
-    //         bass1: 'B♭3 - C4',
-    //         bass2: 'F2 - B♭3'
-    //     },
-    //     upcoming: false
-
-    // },
     {
-        id: 2,
+        id: 1,
         pathExt: 'sicut-ssaa',
         imagePath: sicutImg,
         imageAlt: 'Sicut cervus',
@@ -60,7 +34,7 @@ const songData = [
         upcoming: false
     },
     {
-        id: 3,
+        id: 2,
         pathExt: 'sitivit-ssaa',
         imagePath: sitivitImg,
         imageAlt: 'Sitivit anima mea',
@@ -85,7 +59,7 @@ const songData = [
         upcoming: false
     },
     {
-        id: 4,
+        id: 3,
         pathExt: 'sicut-sitivit-ssaa',
         imagePath: sicutSitivitImg,
         imageAlt: 'Sicut cervus/Sitivit anima mea',
@@ -110,7 +84,7 @@ const songData = [
         upcoming: false
     },
     {
-        id: 5,
+        id: 4,
         pathExt: 'the-silver-swan-ssa',
         imagePath: silverSwanImg,
         imageAlt: 'The Silver Swan',
@@ -134,7 +108,7 @@ const songData = [
         upcoming: true
     },
     // {
-    //     id: 6,
+    //     id: 5,
     //     pathExt: 'sehnsucht-ssaa',
     //     imagePath: sehnsuchtImg,
     //     imageAlt: 'Sehnsucht',
@@ -160,7 +134,7 @@ const songData = [
     //     upcoming: true
     // },
     // {
-    //     id: 5,
+    //     id: ,
     //     pathExt: 'se-tu-m\'ami',
     //     imagePath: seTuMamiImg,
     //     imageAlt: 'Se tu m\'ami',
@@ -182,6 +156,32 @@ const songData = [
     //         alto: '',
     //     }, 
     //     upcoming: true
+    // },
+        // {
+    //     id: ,
+    //     pathExt: 'danza-ttbb',
+    //     imagePath: danzaImg,
+    //     imageAlt: 'Danza, danza',
+    //     purchaseLink: 'https://www.jwpepper.com/danza-danza-11625730-2547492/p',
+    //     purchaseSite: 'J.W. Pepper',
+    //     price: '$2.50',  
+    //     listenLink: 'https://youtu.be/7R6h6a1PyrU',
+    //     composerLast: 'Durante',
+    //     composerFirst: 'Francesco',
+    //     songTitle: 'Danza, danza',
+    //     songParts: 'TTBB',
+    //     category: 'bass',
+    //     accompaniment: 'pianoOnly',
+    //     accompDescr: ' and piano',
+    //     releaseDate: '2025-02-12',
+    //     range: {
+    //         tenor1: 'F3 - G♭4',
+    //         tenor2: 'D♭3 - F4',
+    //         bass1: 'B♭3 - C4',
+    //         bass2: 'F2 - B♭3'
+    //     },
+    //     upcoming: false
+
     // },
 ];
 

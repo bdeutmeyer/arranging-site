@@ -61,6 +61,7 @@
   background-color: white;
   border: 2px solid black;
   width: fit-content;
+  transform: rotate(10deg);
 }
 
 .photo-strip-img {
