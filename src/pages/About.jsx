@@ -19,8 +19,8 @@ export default function About() {
 
                     {/* Text Column */}
                     <Col md="9" className='px-5'>
-                        <p>Beth Deutmeyer is a voice teacher, singer, and arranger based in central Iowa. She has three voice degrees (BM Iowa State University, MM and DMA University of Nebraska-Lincoln), two kids, and one husband. Also a dog, but saying that before would have ruined the 3-2-1 structure of that last sentence, wouldn't it?</p>
-                        <p>Alongside some expert--or at least mostly adequate--momming, Beth has cobbled together one heck of a freelance music career as a private studio teacher + occasional adjunct voice instructor + choral accompanist + now choral arranger. She also crochets, likes to cook tasty food, rides tandem bicycles with her family, built this website herself (ooooh, fancy!) and is a NYTimes word game devotee.</p>
+                        <p>Beth Deutmeyer is a voice teacher, singer, and arranger based in central Iowa. She has three voice degrees (BM Iowa State University, MM and DMA University of Nebraska-Lincoln), two kids, and one husband. She also has a dog, but saying that before would have ruined the 3-2-1 structure of that last sentence.</p>
+                        <p>Alongside some expert--or at least mostly adequate--momming, Beth has cobbled together one heck of a freelance music career as a voice instructor + choral accompanist + choral arranger. She also crochets, likes to cook tasty food, rides tandem bicycles with her family, built this website herself (ooooh, fancy!), and is a NYTimes word game devotee.</p>
                         <p>Beth is always up for new projects and opportunities, so if there is a piece you wish existed in the voicing you need, please contact her!</p>
                     </Col>
 
