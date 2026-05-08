@@ -9,10 +9,6 @@ export default function Songs({ songData, onSongClick }) {
     {[...songData].reverse().map(song => (
         <Col key={song.id} onClick={() => onSongClick(song.id)}>
             <Link to={`/arrangements/${song.pathExt}`} className='text-decoration-none'>
-                {/* 
-                   We add a template literal here. 
-                   If song.upcoming is true, it adds 'upcoming-card', otherwise it adds nothing.
-                */}
                 <Card className="songcard-link shadow sans-font-reg m-2 mb-4">
                     <Row className="g-0">
                         <Col xs="6">
@@ -26,7 +22,6 @@ export default function Songs({ songData, onSongClick }) {
                             <CardBody className='ps-4'>
                                 <CardTitle tag="h5" className='rounded'>
                                     {song.songTitle}
-                                    {/* Optional: Add a visual badge if it's upcoming */}
                                     {song.upcoming && <div className="badge text-secondary ps-0 mb-1 d-block text-start">Coming Soon</div>}
                                 </CardTitle>
                                 

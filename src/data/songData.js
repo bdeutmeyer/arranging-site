@@ -1,9 +1,9 @@
-import danzaImg from "../assets/images/danza.png"
 import sicutImg from "../assets/images/sicut.png"
 import sitivitImg from "../assets/images/sitivit.png"
 import sicutSitivitImg from "../assets/images/sicutSitivit.png"
 import silverSwanImg from "../assets/images/silverSwan.png"
 import weepImg from "../assets/images/weep.png"
+import danzaImg from "../assets/images/danza.png"
 import sehnsuchtImg from "../assets/images/sehnsucht.png"
 // import seTuMamiImg from "../assets/images/seTuMami.png"
 // To add songs: -check "upcoming" boolean of the last song, print to pdf then use preview to export p. 1 as png, releaseDate format YYYY-MM-DD, category = treble/bass/mixed, accidentals: ♭♯♮𝄪𝄫
@@ -129,6 +129,30 @@ const songData = [
             soprano1: 'E♭4 - G5',
             soprano2: 'B♭4 - E♭5',
             alto: 'F3 - C5'
+        }, 
+        upcoming: true
+    },
+    {
+        id: 6,
+        pathExt: 'danza-danza-tbb',
+        imagePath: danzaImg,
+        imageAlt: 'Danza, danza',
+        purchaseLink: 'www.bethdeutmeyer.com',
+        purchaseSite: 'J.W. Pepper',
+        price: '$2.50',  
+        listenLink: 'https://youtu.be/8Nkgg7D6t-w',
+        composerLast: 'Durante',
+        composerFirst: 'Francesco',
+        songTitle: 'Danza, danza',
+        songParts: 'TBB',
+        category: 'bass',
+        accompaniment: 'pianoOnly',
+        accompDescr: ' and piano',
+        releaseDate: '',
+        range: {
+            tenor: 'A2 - E4',
+            baritone: 'A2 - D4',
+            alto: 'A2 - B3'
         }, 
         upcoming: true
     },

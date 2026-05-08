@@ -44,10 +44,9 @@ export default function SongDetail() {
                         </>)}
 
                         <br />
+                        {song.listenLink == '' ? <></> : <h5><a href={song.listenLink} className='text-black'>Listen on YouTube</a></h5> }
                         {song.upcoming ? (<h5>Coming soon!</h5>) : (
                             <>
-                                <h5><a href={song.listenLink} className='text-black'>Listen on YouTube</a></h5>
-                                <h5>Available for purchase on J.W. Pepper</h5>
                                 <br />
                                 <h5>Price per copy: {song.price}</h5>
                                 <Button
