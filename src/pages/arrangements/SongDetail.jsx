@@ -44,7 +44,7 @@ export default function SongDetail() {
                         </>)}
 
                         <br />
-                        {song.listenLink == '' ? <></> : <h5><a href={song.listenLink} className='text-black'>Listen on YouTube</a></h5> }
+                        {song.listenLink == '' ? <></> : <h5><a href={song.listenLink} target="_blank" rel="noopener" className='text-black'>Listen on YouTube</a></h5> }
                         {song.upcoming ? (<h5>Coming soon!</h5>) : (
                             <>
                                 <br />
@@ -53,6 +53,8 @@ export default function SongDetail() {
                                     color="dark"
                                     tag="a"
                                     href={song.purchaseLink}
+                                    target="_blank"
+                                    rel="noopener"
                                     className='mt-3'
                                 >Purchase on {song.purchaseSite}</Button>
                             </>
