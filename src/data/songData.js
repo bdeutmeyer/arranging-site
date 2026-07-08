@@ -4,6 +4,7 @@ import sicutSitivitImg from "../assets/images/sicutSitivit.png"
 import silverSwanImg from "../assets/images/silverSwan.png"
 import weepImg from "../assets/images/weep.png"
 import danzaImg from "../assets/images/danza.png"
+import vocaliseImg from "../assets/images/vocalise.png"
 import sehnsuchtImg from "../assets/images/sehnsucht.png"
 // import seTuMamiImg from "../assets/images/seTuMami.png"
 // To add songs: -check "upcoming" boolean of the last song, print to pdf then use preview to export p. 1 as png, releaseDate format YYYY-MM-DD, category = treble/bass/mixed, accidentals: ♭♯♮𝄪𝄫
@@ -113,7 +114,7 @@ const songData = [
         pathExt: 'weep-you-no-more-ssa',
         imagePath: weepImg,
         imageAlt: 'Weep You No More',
-        purchaseLink: 'www.bethdeutmeyer.com',
+        purchaseLink: 'https://www.jwpepper.com/weep-you-no-more-11690510-2785627/p',
         purchaseSite: 'J.W. Pepper',
         price: '$2.50',  
         listenLink: 'https://youtu.be/290ODmPpDUA',
@@ -124,20 +125,20 @@ const songData = [
         category: 'treble',
         accompaniment: 'pianoOnly',
         accompDescr: ' and piano',
-        releaseDate: '',
+        releaseDate: '2026-05-05',
         range: {
             soprano1: 'E♭4 - G5',
             soprano2: 'B♭4 - E♭5',
             alto: 'F3 - C5'
         }, 
-        upcoming: true
+        upcoming: false
     },
     {
         id: 6,
         pathExt: 'danza-danza-tbb',
         imagePath: danzaImg,
         imageAlt: 'Danza, danza',
-        purchaseLink: 'www.bethdeutmeyer.com',
+        purchaseLink: 'https://www.jwpepper.com/danza-danza-11690507-2785621/p',
         purchaseSite: 'J.W. Pepper',
         price: '$2.50',  
         listenLink: 'https://youtu.be/8Nkgg7D6t-w',
@@ -148,11 +149,40 @@ const songData = [
         category: 'bass',
         accompaniment: 'pianoOnly',
         accompDescr: ' and piano',
-        releaseDate: '',
+        releaseDate: '2026-05-06',
         range: {
             tenor: 'A2 - E4',
             baritone: 'A2 - D4',
-            alto: 'A2 - B3'
+            bass: 'A2 - B3'
+        }, 
+        upcoming: false
+    },
+        {
+        id: 7,
+        pathExt: 'vocalise-ssaattbb',
+        imagePath: vocaliseImg,
+        imageAlt: 'Vocalise',
+        purchaseLink: 'www.bethdeutmeyer.com',
+        purchaseSite: 'J.W. Pepper',
+        price: '$2.50',  
+        listenLink: '',
+        composerLast: 'Rachmaninoff',
+        composerFirst: 'Sergei',
+        songTitle: 'Vocalise',
+        songParts: 'SSAATTBB',
+        category: 'mixed',
+        accompaniment: 'aCappella',
+        accompDescr: ' a cappella',
+        releaseDate: '',
+        range: {
+            soprano1: '',
+            soprano2: '',
+            alto1: '',
+            alto2: '',
+            tenor1: '',
+            tenor2: '',
+            bass1: '',
+            bass2: ''
         }, 
         upcoming: true
     },
