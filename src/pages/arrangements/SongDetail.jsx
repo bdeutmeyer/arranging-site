@@ -26,8 +26,24 @@ export default function SongDetail() {
                         <br />
                         {song.upcoming ? (<></>) : (<>
                             <h5>Range:</h5>
-                            <ul className="list-unstyled" style={{ fontFamily: 'Arial' }}>
-                                {Object.entries(song.range).map(([part, notes]) => (
+                            <ul className="list-unstyled" >
+                            {Object.entries(song.range).map(([part, notes]) => (
+  <li key={part} className='ps-4 ranges'>
+    {part.replace(/([a-zA-Z]+)(\d+)?/, (_, voice, number) => {
+      const capVoice = voice.charAt(0).toUpperCase() + voice.slice(1);
+      return number ? `${capVoice} ${number}` : capVoice;
+    })}
+    : {notes.split(/([♭♯♮𝄪𝄫])/).map((char, i) => 
+      ['♭', '♯', '♮', '𝄪', '𝄫'].includes(char) ? (
+        <span key={i} className='font-monospace'>{char}</span>
+      ) : (
+        <React.Fragment key={i}>{char}</React.Fragment>
+      )
+    )}
+  </li>
+))}
+
+                                {/* {Object.entries(song.range).map(([part, notes]) => (
                                     <li key={part} className='ps-4 ranges'>
                                         {part.replace(/(\w+)(\d)/, (_, voice, number) =>
                                             `${voice.charAt(0).toUpperCase() + voice.slice(1)} ${number}`
@@ -39,24 +55,28 @@ export default function SongDetail() {
                                             )
                                         )}
                                     </li>
-                                ))}
+                                ))} */}
                             </ul>
                         </>)}
 
                         <br />
                         {song.listenLink == '' ? <></> : <h5><a href={song.listenLink} target="_blank" rel="noopener" className='text-black'>Listen on YouTube</a></h5> }
                         {song.upcoming ? (<h5>Coming soon!</h5>) : (
+                            
                             <>
+                                <ul className="list-unstyled">
+                                    <br />
+                                <h5>Purchase on:</h5>
+                                {Object.entries(song.purchaseInfo).map(([info, {site, link}]) => (
+                                    <li key={info} className=''>
+                                        <a href={link} target="_blank" rel="noopener" className='text-black ps-4'>{site}</a>
+
+                                    </li>
+                                ))}
+                            </ul>
                                 <br />
-                                <h5>Price per copy: {song.price}</h5>
-                                <Button
-                                    color="dark"
-                                    tag="a"
-                                    href={song.purchaseLink}
-                                    target="_blank"
-                                    rel="noopener"
-                                    className='mt-3'
-                                >Purchase on {song.purchaseSite}</Button>
+                                {/* <h5>Price per copy: {song.price}</h5> */}
+
                             </>
                         )}
                     </Col>

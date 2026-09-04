@@ -15,6 +15,20 @@ const songData = [
         pathExt: 'sicut-ssaa',
         imagePath: sicutImg,
         imageAlt: 'Sicut cervus',
+        purchaseInfo: {
+            info1: {
+                site: 'J.W. Pepper',
+                link: 'https://www.jwpepper.com/sicut-cervus-11625731-2547494/p'
+            },
+            // info2: {
+            //     site: 'Sheet Music Plus',
+            //     link: ''
+            // },
+            // info3: {
+            //     site: 'Sheet Music Direct',
+            //     link: ''
+            // }
+        },
         purchaseLink: 'https://www.jwpepper.com/sicut-cervus-11625731-2547494/p',
         purchaseSite: 'J.W. Pepper',
         price: '$2.50',  
@@ -40,6 +54,20 @@ const songData = [
         pathExt: 'sitivit-ssaa',
         imagePath: sitivitImg,
         imageAlt: 'Sitivit anima mea',
+        purchaseInfo: {
+            info1: {
+                site: 'J.W. Pepper',
+                link: 'https://www.jwpepper.com/sitivit-anima-mea-11625736-2547504/p'
+            },
+            // info2: {
+            //     site: 'Sheet Music Plus',
+            //     link: ''
+            // },
+            // info3: {
+            //     site: 'Sheet Music Direct',
+            //     link: ''
+            // }
+        },
         purchaseLink: 'https://www.jwpepper.com/sitivit-anima-mea-11625736-2547504/p',
         purchaseSite: 'J.W. Pepper',
         price: '$2.50',  
@@ -65,6 +93,20 @@ const songData = [
         pathExt: 'sicut-sitivit-ssaa',
         imagePath: sicutSitivitImg,
         imageAlt: 'Sicut cervus - Sitivit anima mea',
+        purchaseInfo: {
+            info1: {
+                site: 'J.W. Pepper',
+                link: 'https://www.jwpepper.com/sicut-cervus-sitivit-anima-mea-11625737-2547449/p'
+            },
+            // info2: {
+            //     site: 'Sheet Music Plus',
+            //     link: ''
+            // },
+            // info3: {
+            //     site: 'Sheet Music Direct',
+            //     link: ''
+            // }
+        },
         purchaseLink: 'https://www.jwpepper.com/sicut-cervus-sitivit-anima-mea-11625737-2547449/p',
         purchaseSite: 'J.W. Pepper',
         price: '$3.50',  
@@ -90,6 +132,20 @@ const songData = [
         pathExt: 'the-silver-swan-ssa',
         imagePath: silverSwanImg,
         imageAlt: 'The Silver Swan',
+        purchaseInfo: {
+            info1: {
+                site: 'J.W. Pepper',
+                link: 'https://www.jwpepper.com/the-silver-swan-11630296-2582599/p'
+            },
+            // info2: {
+            //     site: 'Sheet Music Plus',
+            //     link: ''
+            // },
+            // info3: {
+            //     site: 'Sheet Music Direct',
+            //     link: ''
+            // }
+        },
         purchaseLink: 'https://www.jwpepper.com/the-silver-swan-11630296-2582599/p',
         purchaseSite: 'J.W. Pepper',
         price: '$2.50',  
@@ -114,6 +170,20 @@ const songData = [
         pathExt: 'weep-you-no-more-ssa',
         imagePath: weepImg,
         imageAlt: 'Weep You No More',
+        purchaseInfo: {
+            info1: {
+                site: 'J.W. Pepper',
+                link: 'https://www.jwpepper.com/weep-you-no-more-11690510-2785627/p'
+            },
+            info2: {
+                site: 'Sheet Music Plus',
+                link: 'https://www.sheetmusicplus.com/en/product/danza-danza-23883766.html'
+            },
+            info3: {
+                site: 'Sheet Music Direct',
+                link: 'https://www.sheetmusicdirect.com/se/ID_No/2116123/Product.aspx'
+            }
+        },
         purchaseLink: 'https://www.jwpepper.com/weep-you-no-more-11690510-2785627/p',
         purchaseSite: 'J.W. Pepper',
         price: '$2.50',  
@@ -138,6 +208,20 @@ const songData = [
         pathExt: 'danza-danza-tbb',
         imagePath: danzaImg,
         imageAlt: 'Danza, danza',
+        purchaseInfo: {
+            info1: {
+                site: 'J.W. Pepper',
+                link: 'https://www.jwpepper.com/danza-danza-11690507-2785621/p'
+            },
+            // info2: {
+            //     site: 'Sheet Music Plus',
+            //     link: ''
+            // },
+            // info3: {
+            //     site: 'Sheet Music Direct',
+            //     link: ''
+            // }
+        },
         purchaseLink: 'https://www.jwpepper.com/danza-danza-11690507-2785621/p',
         purchaseSite: 'J.W. Pepper',
         price: '$2.50',  
@@ -162,6 +246,20 @@ const songData = [
         pathExt: 'vocalise-ssaattbb',
         imagePath: vocaliseImg,
         imageAlt: 'Vocalise',
+        purchaseInfo: {
+            info1: {
+                site: 'J.W. Pepper',
+                link: ''
+            },
+            // info2: {
+            //     site: 'Sheet Music Plus',
+            //     link: ''
+            // },
+            // info3: {
+            //     site: 'Sheet Music Direct',
+            //     link: ''
+            // }
+        },
         purchaseLink: 'www.bethdeutmeyer.com',
         purchaseSite: 'J.W. Pepper',
         price: '$2.50',  
