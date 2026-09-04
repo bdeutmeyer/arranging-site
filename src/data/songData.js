@@ -213,14 +213,14 @@ const songData = [
                 site: 'J.W. Pepper',
                 link: 'https://www.jwpepper.com/danza-danza-11690507-2785621/p'
             },
-            // info2: {
-            //     site: 'Sheet Music Plus',
-            //     link: ''
-            // },
-            // info3: {
-            //     site: 'Sheet Music Direct',
-            //     link: ''
-            // }
+            info2: {
+                site: 'Sheet Music Plus',
+                link: 'https://www.sheetmusicplus.com/en/product/danza-danza-23883766.html'
+            },
+            info3: {
+                site: 'Sheet Music Direct',
+                link: 'https://www.sheetmusicdirect.com/se/ID_No/2116123/Product.aspx'
+            }
         },
         purchaseLink: 'https://www.jwpepper.com/danza-danza-11690507-2785621/p',
         purchaseSite: 'J.W. Pepper',
