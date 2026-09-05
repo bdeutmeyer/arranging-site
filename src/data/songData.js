@@ -20,14 +20,14 @@ const songData = [
                 site: 'J.W. Pepper',
                 link: 'https://www.jwpepper.com/sicut-cervus-11625731-2547494/p'
             },
-            // info2: {
-            //     site: 'Sheet Music Plus',
-            //     link: ''
-            // },
-            // info3: {
-            //     site: 'Sheet Music Direct',
-            //     link: ''
-            // }
+            info2: {
+                site: 'Sheet Music Plus',
+                link: 'https://www.sheetmusicplus.com/en/product/sicut-cervus-23883924.html'
+            },
+            info3: {
+                site: 'Sheet Music Direct',
+                link: 'https://www.sheetmusicdirect.com/se/ID_No/2116271/Product.aspx'
+            }
         },
         purchaseLink: 'https://www.jwpepper.com/sicut-cervus-11625731-2547494/p',
         purchaseSite: 'J.W. Pepper',
@@ -59,14 +59,14 @@ const songData = [
                 site: 'J.W. Pepper',
                 link: 'https://www.jwpepper.com/sitivit-anima-mea-11625736-2547504/p'
             },
-            // info2: {
-            //     site: 'Sheet Music Plus',
-            //     link: ''
-            // },
-            // info3: {
-            //     site: 'Sheet Music Direct',
-            //     link: ''
-            // }
+            info2: {
+                site: 'Sheet Music Plus',
+                link: 'https://www.sheetmusicplus.com/en/product/sitivit-anima-mea-23883930.html'
+            },
+            info3: {
+                site: 'Sheet Music Direct',
+                link: 'https://www.sheetmusicdirect.com/se/ID_No/2116280/Product.aspx'
+            }
         },
         purchaseLink: 'https://www.jwpepper.com/sitivit-anima-mea-11625736-2547504/p',
         purchaseSite: 'J.W. Pepper',
@@ -98,14 +98,14 @@ const songData = [
                 site: 'J.W. Pepper',
                 link: 'https://www.jwpepper.com/sicut-cervus-sitivit-anima-mea-11625737-2547449/p'
             },
-            // info2: {
-            //     site: 'Sheet Music Plus',
-            //     link: ''
-            // },
-            // info3: {
-            //     site: 'Sheet Music Direct',
-            //     link: ''
-            // }
+            info2: {
+                site: 'Sheet Music Plus',
+                link: 'https://www.sheetmusicplus.com/en/product/sicut-cervus-sitivit-anima-mea-23883938.html'
+            },
+            info3: {
+                site: 'Sheet Music Direct',
+                link: 'https://www.sheetmusicdirect.com/se/ID_No/2116286/Product.aspx'
+            }
         },
         purchaseLink: 'https://www.jwpepper.com/sicut-cervus-sitivit-anima-mea-11625737-2547449/p',
         purchaseSite: 'J.W. Pepper',
@@ -137,14 +137,14 @@ const songData = [
                 site: 'J.W. Pepper',
                 link: 'https://www.jwpepper.com/the-silver-swan-11630296-2582599/p'
             },
-            // info2: {
-            //     site: 'Sheet Music Plus',
-            //     link: ''
-            // },
-            // info3: {
-            //     site: 'Sheet Music Direct',
-            //     link: ''
-            // }
+            info2: {
+                site: 'Sheet Music Plus',
+                link: 'https://www.sheetmusicplus.com/en/product/the-silver-swan-23883972.html'
+            },
+            info3: {
+                site: 'Sheet Music Direct',
+                link: 'https://www.sheetmusicdirect.com/se/ID_No/2116326/Product.aspx'
+            }
         },
         purchaseLink: 'https://www.jwpepper.com/the-silver-swan-11630296-2582599/p',
         purchaseSite: 'J.W. Pepper',
@@ -181,7 +181,7 @@ const songData = [
             },
             info3: {
                 site: 'Sheet Music Direct',
-                link: 'https://www.sheetmusicdirect.com/se/ID_No/2116123/Product.aspx'
+                link: 'https://www.sheetmusicdirect.com/se/ID_No/2116134/Product.aspx'
             }
         },
         purchaseLink: 'https://www.jwpepper.com/weep-you-no-more-11690510-2785627/p',
